@@ -19,7 +19,7 @@ if (USING_SAMPLE_DATA) cat(paste0(
   <p class="lead">A running snapshot of changes to the US economy through policy
   shifts starting in 2025 &mdash; labor, consumers, travel, public health, and
   markets, tracked on one continuously updated page.</p>
-  <p class="hero-meta">Five live public data sources &middot; automated R
+  <p class="hero-meta">28 economic indicators &middot; automated R
   pipeline &middot; updated weekly</p>
 </div>
 ```
