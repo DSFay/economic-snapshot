@@ -90,5 +90,5 @@ free API keys.
 
 ## Credits
 
-Economic Snapshot was built by Faelynn Carroll, with guidance from Ethan
+Economic Snapshot was built by Faelynn Carroll, with inupt from Ethan
 Kapstein and Jacob N. Shapiro. MIT licensed.
