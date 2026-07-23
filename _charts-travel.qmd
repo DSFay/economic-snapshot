@@ -9,7 +9,9 @@ p_tourist <- ggplot(top_10_tourist_origins,
   labs(x = NULL, y = "Visitors (100k)",
        caption = "Source: International Trade Administration (I-94) | Monthly") +
   theme_snapshot()
-plotly_chart(p_tourist)
+plotly_chart(p_tourist, links = c(
+  "International Trade Administration (I-94)" =
+    "https://www.trade.gov/i-94-arrivals-program"))
 ```
 
 Arrivals to the United States from the top 10 source countries, from I-94
@@ -21,7 +23,9 @@ border crossing data. Hover a line, or use the legend, to identify each country.
 ```{r}
 tsa_weekly |>
   line_chart(xvar = week_start, yvar = encounters_10k, y_lab = "Encounters (10k)",
-             caption = "Source: Transportation Security Administration | Daily, aggregated weekly")
+             caption = "Source: Transportation Security Administration | Daily, aggregated weekly",
+             links = c("Transportation Security Administration" =
+                         "https://www.tsa.gov/travel/passenger-volumes"))
 ```
 
 Passenger throughput at Transportation Security Administration checkpoints — a
@@ -34,7 +38,8 @@ proxy for both business and leisure travel demand.
 ```{r}
 loadfactor_dat |>
   line_chart(yvar = value, y_lab = "Percent",
-             caption = "Source: U.S. Bureau of Transportation Statistics via FRED | Monthly")
+             caption = "Source: U.S. Bureau of Transportation Statistics via FRED | Monthly",
+             links = c(FRED = fred_url("LOADFACTOR")))
 ```
 
 The share of available airline seats that are actually filled, across domestic

@@ -3,7 +3,8 @@
 ```{r}
 bond_dat |>
   line_chart(yvar = value, y_lab = "Percent",
-             caption = "Source: Board of Governors of the Federal Reserve System via FRED | Weekly average of daily")
+             caption = "Source: Board of Governors of the Federal Reserve System via FRED | Weekly average of daily",
+             links = c(FRED = fred_url("DGS10")))
 ```
 
 The yield on 10-year U.S. Treasury securities at constant maturity, a benchmark
@@ -16,7 +17,8 @@ corporate bonds.
 ```{r}
 spy_dat |>
   line_chart(yvar = value, y_lab = "Index",
-             caption = "Source: S&P Dow Jones Indices LLC via FRED | Weekly average of daily")
+             caption = "Source: S&P Dow Jones Indices LLC via FRED | Weekly average of daily",
+             links = c(FRED = fred_url("SP500")))
 ```
 
 The S&P 500 index tracks the market-capitalization-weighted performance of 500
@@ -29,7 +31,8 @@ U.S. equity market.
 ```{r}
 house_dat |>
   line_chart(yvar = value, y_lab = "Thousands of units",
-             caption = "Source: U.S. Census Bureau and U.S. Dept. of Housing and Urban Development via FRED | Monthly")
+             caption = "Source: U.S. Census Bureau and U.S. Dept. of Housing and Urban Development via FRED | Monthly",
+             links = c(FRED = fred_url("HOUST")))
 ```
 
 New privately-owned housing units started, at a seasonally adjusted annual rate.
@@ -42,7 +45,8 @@ reflect demand in the housing market.
 ```{r}
 usd_dat |>
   line_chart(yvar = value, y_lab = "Index",
-             caption = "Source: Board of Governors of the Federal Reserve System via FRED | Weekly")
+             caption = "Source: Board of Governors of the Federal Reserve System via FRED | Weekly",
+             links = c(FRED = fred_url("DTWEXBGS")))
 ```
 
 The value of the dollar against a basket of major trading partners' currencies,
@@ -55,7 +59,8 @@ more expensive, and tends to weigh on the earnings of multinational firms.
 ```{r}
 gdpnow_dat |>
   line_chart(yvar = value, y_lab = "Percent (annualized)",
-             caption = "Source: Federal Reserve Bank of Atlanta via FRED | Quarterly")
+             caption = "Source: Federal Reserve Bank of Atlanta via FRED | Quarterly",
+             links = c(FRED = fred_url("GDPNOW")))
 ```
 
 GDPNow is the Atlanta Fed's running estimate of real GDP growth for the current

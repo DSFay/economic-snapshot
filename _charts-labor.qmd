@@ -5,18 +5,32 @@ p_unrate <- ggplot(unrate_filtered, aes(x = date, y = unrate_percent)) +
   geom_line(color = LINE_COLOR, linewidth = 0.5) +
   geom_hline(yintercept = unrate_mean, linetype = "dotted",
              color = ANNOT_COLOR, linewidth = 0.6) +
-  annotate("text", x = min(unrate_filtered$date, na.rm = TRUE), y = unrate_mean,
-           label = paste0("Historic Average (", round(unrate_mean, 1), "%)"),
-           hjust = 0, vjust = -0.7, size = 3, color = "#8c8c8c") +
   geom_vline(xintercept = ELECTION_DATE, linetype = "dashed", color = ELECTION_COLOR) +
   labs(x = NULL, y = "Percentage",
        caption = "Source: U.S. Bureau of Labor Statistics via FRED | Monthly") +
   theme_snapshot()
-plotly_chart(p_unrate)
+
+# The label for the dotted mean line is a plotly annotation rather than a
+# ggplot annotate(): anchored to the left edge of the plotting area in PAPER
+# coordinates (x = 0, xanchor = "left") it sits at the same place but can never
+# overflow the panel, so it stays fully visible at any window or chart width.
+# Only y is in data coordinates, so it tracks the line it labels.
+plotly_chart(
+  p_unrate,
+  links = c(FRED = fred_url("UNRATE")),
+  annotations = list(list(
+    text = sprintf("Period average (%.1f%%)", unrate_mean),
+    xref = "paper", x = 0, xanchor = "left",
+    yref = "y", y = unrate_mean, yanchor = "bottom", yshift = 3,
+    showarrow = FALSE, font = list(size = 10, color = "#8c8c8c"))))
 ```
 
 The national unemployment rate measures the share of the labor force that is
-jobless and actively seeking work. The dotted line shows the period average.
+jobless and actively seeking work. The dotted line is the average across the
+period charted here (`r format(min(unrate_filtered$date), "%B %Y")` to
+`r format(max(unrate_filtered$date), "%B %Y")`) &mdash; the mean of every
+monthly reading shown, not a long-run historical average. It does not change
+when you switch the 1Y / 2Y / All window.
 :::
 
 ::: {.chart-card}
@@ -24,7 +38,8 @@ jobless and actively seeking work. The dotted line shows the period average.
 ```{r}
 adp |>
   line_chart(yvar = persons / 1e6, y_lab = "Persons (millions)",
-             caption = "Source: Automatic Data Processing, Inc. via FRED | Monthly")
+             caption = "Source: Automatic Data Processing, Inc. via FRED | Monthly",
+             links = c(FRED = fred_url("ADPWNUSNERSA")))
 ```
 
 Total nonfarm private payroll employment tracks the number of paid workers
@@ -40,9 +55,15 @@ p_large <- ggplot(group2_data, aes(x = date, y = unemployment_rate, color = stat
   geom_vline(xintercept = ELECTION_DATE, linetype = "dashed", color = ELECTION_COLOR) +
   scale_colour_manual(values = okabe_ito, name = NULL) +
   labs(x = NULL, y = "Continued claims rate (%)",
-       caption = "Source: U.S. Bureau of Labor Statistics via FRED | Monthly average") +
+       caption = paste("Source: state continued claims via FRED;",
+                       "labor force from the U.S. Bureau of Labor Statistics",
+                       "| Monthly average")) +
   theme_snapshot()
-plotly_chart(p_large)
+# Two sources here: FRED supplies the weekly claims (numerator), BLS the state
+# civilian labor force (denominator), so the note links to both.
+plotly_chart(p_large, links = c(
+  FRED = "https://fred.stlouisfed.org/release/tables?rid=469&eid=1192108#snid=1192113",
+  "U.S. Bureau of Labor Statistics" = "https://www.bls.gov/news.release/laus.t01.htm"))
 ```
 
 Continued unemployment insurance claims as a percentage of each state's
@@ -55,7 +76,8 @@ civilian labor force, for the five largest states by population plus DC.
 jolts_dat |>
   line_chart(yvar = value / 1000, y_lab = "Job openings (millions)",
              line_color = okabe_ito[2],
-             caption = "Source: U.S. Bureau of Labor Statistics via FRED | Monthly")
+             caption = "Source: U.S. Bureau of Labor Statistics via FRED | Monthly",
+             links = c(FRED = fred_url("JTSJOL")))
 ```
 
 Total job openings from the Bureau of Labor Statistics Job Openings and Labor
@@ -68,7 +90,8 @@ reference month regardless of how they are advertised.
 ```{r}
 initial_claims_dat |>
   line_chart(yvar = value, y_lab = "Claims",
-             caption = "Source: U.S. Employment and Training Administration via FRED | Weekly")
+             caption = "Source: U.S. Employment and Training Administration via FRED | Weekly",
+             links = c(FRED = fred_url("IC4WSA")))
 ```
 
 New claims for unemployment benefits, smoothed as a four-week moving average.
@@ -81,7 +104,8 @@ weakening before it shows up in the monthly unemployment rate.
 ```{r}
 wage_growth_dat |>
   line_chart(yvar = value, y_lab = "Percent",
-             caption = "Source: Federal Reserve Bank of Atlanta via FRED | Monthly")
+             caption = "Source: Federal Reserve Bank of Atlanta via FRED | Monthly",
+             links = c(FRED = fred_url("FRBATLWGT3MMAWMHWGO")))
 ```
 
 The Atlanta Fed's Wage Growth Tracker: the median year-over-year growth in

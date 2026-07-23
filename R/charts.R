@@ -9,14 +9,48 @@
 library(ggplot2)
 library(plotly)
 
+# --- Source links -----------------------------------------------------------
+# Every chart's source note links out to where the data actually lives, so a
+# reader can check the numbers themselves.
+
+# The landing page for one FRED series, e.g. fred_url("UNRATE").
+fred_url <- function(series_id) {
+  paste0("https://fred.stlouisfed.org/series/", series_id)
+}
+
+# link_sources(): turn named substrings of a caption into links. `links` is a
+# named character vector whose names are literal phrases in the caption and
+# whose values are URLs, e.g. c(FRED = fred_url("UNRATE")).
+#
+# Substitution runs in two passes via a sentinel so that a URL inserted by one
+# replacement can never be matched by a later one.
+link_sources <- function(caption, links) {
+  if (is.null(caption) || length(links) == 0) return(caption)
+  phrases  <- names(links)
+  sentinel <- sprintf("\001%d\001", seq_along(links))
+  for (i in seq_along(links)) {
+    caption <- sub(phrases[i], sentinel[i], caption, fixed = TRUE)
+  }
+  for (i in seq_along(links)) {
+    caption <- sub(sentinel[i],
+                   sprintf('<a href="%s" target="_blank" rel="noopener">%s</a>',
+                           links[[i]], phrases[i]),
+                   caption, fixed = TRUE)
+  }
+  caption
+}
+
 # plotly_chart(): turn a ggplot into a plotly chart. rangeselector = TRUE adds
-# the 1Y / 2Y / All time-window buttons under the chart.
+# the 1Y / 2Y / All time-window buttons under the chart. `links` is passed to
+# link_sources() to hyperlink the source note; `annotations` is a list of extra
+# plotly annotations to draw on top.
 # (Named plotly_chart, not interactive, because interactive() is a built-in R
 #  function that knitr calls during rendering.)
-plotly_chart <- function(p, rangeselector = TRUE) {
+plotly_chart <- function(p, rangeselector = TRUE, links = NULL,
+                         annotations = NULL) {
   # ggplotly drops the ggplot caption, so capture it and re-add it below as a
   # bottom annotation (the source credit), mirroring the Shiny app.
-  caption <- p$labels$caption
+  caption <- link_sources(p$labels$caption, links)
   gp <- ggplotly(p) |>
     config(displayModeBar = FALSE, responsive = TRUE) |>
     layout(font = list(family = "Inter, system-ui, sans-serif"),
@@ -89,31 +123,34 @@ plotly_chart <- function(p, rangeselector = TRUE) {
   gp$x$layout$yaxis$tickformat <- value_fmt
   gp$x$layout$xaxis$hoverformat <- "%b %d, %Y"
 
-  # Source credit on its own line below the buttons (right-aligned). Anchored
-  # to the bottom of the plot (y = 0) and pushed down a fixed number of pixels
-  # (yshift), so it lands in the bottom margin regardless of the chart's
-  # height — a fraction-based y gets clipped on tall charts. Its own line means
-  # it never collides with the buttons on narrow / mobile widths.
-  if (!is.null(caption)) {
-    gp$x$layout$annotations <- c(gp$x$layout$annotations, list(list(
-      text = caption, showarrow = FALSE,
-      xref = "paper", yref = "paper",
-      x = 1, xanchor = "right", y = 0, yanchor = "top", yshift = -76,
-      font = list(size = 9, color = "#bcbcbc")
-    )))
+  # Any extra annotations the caller asked for. (Not via
+  # plotly::add_annotations() — on a ggplotly object that adds each annotation
+  # twice, which double-draws the text.)
+  if (length(annotations) > 0) {
+    gp$x$layout$annotations <- c(gp$x$layout$annotations, annotations)
   }
-  # Room under the x-axis for the button row + the source line beneath it.
-  gp$x$layout$margin$b <- 98
+  # Room under the x-axis for the button row.
+  gp$x$layout$margin$b <- 62
   # Titles are rendered as HTML above each chart (so they wrap), so the plot
   # itself needs only a small top margin.
   gp$x$layout$margin$t <- 20
-  gp
+
+  # The source credit is HTML *below* the plot, not a plotly annotation inside
+  # it. A plotly annotation is a single unwrappable line of SVG text, so the
+  # longer notes (and the links now in them) ran off the left edge of narrow
+  # charts; as HTML it wraps to the chart's width at any screen size, and the
+  # links are real anchors — focusable, and a proper tap target on a phone.
+  if (is.null(caption)) return(gp)
+  htmltools::tagList(
+    gp,
+    htmltools::HTML(sprintf('<div class="chart-source">%s</div>', caption))
+  )
 }
 
 # line_chart(): standard single-line time series, then made interactive.
 # The chart title is rendered as HTML above the chart (see the .chart-title
 # element on each page), not inside the plot, so it can wrap.
-line_chart <- function(df, yvar, y_lab, caption, xvar = date,
+line_chart <- function(df, yvar, y_lab, caption, links = NULL, xvar = date,
                        line_color = LINE_COLOR, show_election = TRUE) {
   p <- ggplot(df, aes(x = {{ xvar }}, y = {{ yvar }})) +
     geom_line(color = line_color, linewidth = 0.5) +
@@ -123,5 +160,5 @@ line_chart <- function(df, yvar, y_lab, caption, xvar = date,
     p <- p + geom_vline(xintercept = ELECTION_DATE,
                         linetype = "dashed", color = ELECTION_COLOR)
   }
-  plotly_chart(p)
+  plotly_chart(p, links = links)
 }

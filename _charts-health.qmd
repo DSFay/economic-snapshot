@@ -15,7 +15,9 @@ p_measles <- ggplot(measles_dat, aes(x = week_start, y = cases)) +
   labs(x = NULL, y = "Cases",
        caption = "Source: U.S. Centers for Disease Control and Prevention | Weekly") +
   theme_snapshot()
-plotly_chart(p_measles)
+plotly_chart(p_measles, links = c(
+  "U.S. Centers for Disease Control and Prevention" =
+    "https://www.cdc.gov/measles/data-research/index.html"))
 ```
 
 Confirmed measles cases in the United States by week of rash onset. Cases were

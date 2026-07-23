@@ -3,7 +3,8 @@
 ```{r}
 car_sales |>
   line_chart(yvar = value, y_lab = "Sales (millions)",
-             caption = "Source: U.S. Bureau of Economic Analysis via FRED | Monthly")
+             caption = "Source: U.S. Bureau of Economic Analysis via FRED | Monthly",
+             links = c(FRED = fred_url("TOTALSA")))
 ```
 
 Total light vehicle sales in the United States at a seasonally adjusted annual
@@ -15,7 +16,8 @@ rate, including new domestic and imported cars and light trucks.
 ```{r}
 consume_loans |>
   line_chart(yvar = value, y_lab = "USD (billions)",
-             caption = "Source: Board of Governors of the Federal Reserve System via FRED | Weekly")
+             caption = "Source: Board of Governors of the Federal Reserve System via FRED | Weekly",
+             links = c(FRED = fred_url("CLSACBW027SBOG")))
 ```
 
 Outstanding consumer loan balances held by all commercial banks, including
@@ -28,7 +30,8 @@ of household borrowing.
 ```{r}
 sentiment_dat |>
   line_chart(yvar = value, y_lab = "Index (1966 = 100)",
-             caption = "Source: University of Michigan Survey of Consumers via FRED | Monthly")
+             caption = "Source: University of Michigan Survey of Consumers via FRED | Monthly",
+             links = c(FRED = fred_url("UMCSENT")))
 ```
 
 The University of Michigan Index of Consumer Sentiment measures household
@@ -42,7 +45,8 @@ a sustained decline often precedes reduced consumer spending.
 ```{r}
 gas_dat |>
   line_chart(yvar = value, y_lab = "USD per gallon",
-             caption = "Source: U.S. Energy Information Administration via FRED | Weekly")
+             caption = "Source: U.S. Energy Information Administration via FRED | Weekly",
+             links = c(FRED = fred_url("GASREGW")))
 ```
 
 The average US retail price for a gallon of regular gasoline. One of the most
@@ -55,7 +59,8 @@ how people feel about inflation more than the overall index does.
 ```{r}
 mortgage_dat |>
   line_chart(yvar = value, y_lab = "Percent",
-             caption = "Source: Freddie Mac via FRED | Weekly")
+             caption = "Source: Freddie Mac via FRED | Weekly",
+             links = c(FRED = fred_url("MORTGAGE30US")))
 ```
 
 The average rate on a 30-year fixed-rate mortgage. This is where market interest
@@ -68,7 +73,8 @@ purchase and largely determines who can afford to buy or refinance.
 ```{r}
 rent_dat |>
   line_chart(yvar = value, y_lab = "Index (1982-84 = 100)",
-             caption = "Source: U.S. Bureau of Labor Statistics via FRED | Monthly")
+             caption = "Source: U.S. Bureau of Labor Statistics via FRED | Monthly",
+             links = c(FRED = fred_url("CUSR0000SEHA")))
 ```
 
 The rent component of the Consumer Price Index, averaged across US cities. Rent
@@ -82,7 +88,8 @@ long after other prices have cooled.
 ```{r}
 cpi_dat |>
   line_chart(yvar = value, y_lab = "Index (1982-84 = 100)",
-             caption = "Source: U.S. Bureau of Labor Statistics via FRED | Monthly")
+             caption = "Source: U.S. Bureau of Labor Statistics via FRED | Monthly",
+             links = c(FRED = fred_url("CPIAUCSL")))
 ```
 
 The Consumer Price Index for All Urban Consumers (CPI-U) tracks changes in
@@ -96,7 +103,8 @@ than the year-over-year change.
 ```{r}
 durable_goods_dat |>
   line_chart(yvar = value, y_lab = "USD (millions)",
-             caption = "Source: U.S. Census Bureau via FRED | Monthly")
+             caption = "Source: U.S. Census Bureau via FRED | Monthly",
+             links = c(FRED = fred_url("DGORDER")))
 ```
 
 New orders placed with domestic manufacturers for durable goods, items expected

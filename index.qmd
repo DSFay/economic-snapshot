@@ -94,7 +94,7 @@ cat('</div>')
 
 Pick a category to explore the full series. Use the 1Y / 2Y / All buttons under
 each chart to change the time window, hover any line for exact values, and note
-the dashed grey line marking the November 2024 election.
+that the dashed grey line marks the November 2024 election.
 
 ```{=html}
 <div class="category-grid">
