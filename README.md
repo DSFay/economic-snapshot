@@ -3,7 +3,7 @@
 A self-updating dashboard of core U.S. economic indicators — labor, consumers,
 travel, public health, and markets — built on an automated R data pipeline
 that pulls from nine live sources through APIs and web scrapers.
-[View the live dashboard](https://dsfay.github.io/economic-snapshot/)**
+**[View the live dashboard](https://dsfay.github.io/economic-snapshot/)**
 
 ![Economic Snapshot dashboard](assets/screenshot.png)
 
