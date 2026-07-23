@@ -65,34 +65,70 @@ theme_snapshot <- function() {
 }
 
 # --- Choose the data source -------------------------------------------------
-# Use the real data/ folder if the pull scripts have populated it; otherwise
-# fall back to the bundled synthetic sample so a fresh clone can render the
-# dashboard without API keys or licensed data. Regenerate the sample with
-# R/make_sample_data.R.
-USING_SAMPLE_DATA <- length(list.files(DATA_DIR, pattern = "[.]csv$",
-                                       recursive = TRUE)) == 0
-if (USING_SAMPLE_DATA) {
-  DATA_DIR <- file.path(BASE_DIR, "sample_data")
-  message("data/ is empty — loading the synthetic sample_data/ instead. ",
-          "Run R/run_all.R with your own API keys to fetch real data.")
+# Prefer the real data/ folder (populated by the pull scripts); fall back to
+# the bundled synthetic sample so a fresh clone renders without API keys.
+#
+# The fallback is PER-SERIES, not all-or-nothing: if a single source failed to
+# pull this run (e.g. a scraper was blocked in CI), only that one series uses
+# sample data and the rest of the site still renders from real data. This keeps
+# the weekly automated rebuild from failing wholesale over one flaky source.
+# Regenerate the sample with R/make_sample_data.R.
+SAMPLE_DIR <- file.path(BASE_DIR, "sample_data")
+
+# The leaf folders under a base dir; each holds the CSV(s) for one series and
+# becomes one global object named after the folder.
+leaf_data_dirs <- function(base_dir) {
+  if (!dir.exists(base_dir)) return(character())
+  all_dirs <- list.dirs(base_dir, recursive = TRUE, full.names = TRUE)
+  all_dirs <- all_dirs[basename(all_dirs) != "logs"]
+  all_dirs[!all_dirs %in% dirname(all_dirs)]
 }
 
-# --- Load the latest CSV from each data folder into a named object ---------
-load_all_latest <- function(base_dir = DATA_DIR) {
-  stopifnot(dir.exists(base_dir))
-  all_dirs  <- list.dirs(base_dir, recursive = TRUE, full.names = TRUE)
-  all_dirs  <- all_dirs[basename(all_dirs) != "logs"]
-  leaf_dirs <- all_dirs[!all_dirs %in% dirname(all_dirs)]
-  purrr::walk(leaf_dirs, function(d) {
+# Load the newest CSV from each leaf folder into a global object named after
+# the folder. With skip_existing = TRUE, leaves whose object already exists are
+# left untouched (so sample data never clobbers real data). Returns the names
+# of the objects actually loaded.
+load_leaves <- function(leaf_dirs, skip_existing = FALSE) {
+  loaded <- character()
+  for (d in leaf_dirs) {
+    obj <- basename(d)
+    if (skip_existing && exists(obj, envir = .GlobalEnv, inherits = FALSE)) next
     files <- list.files(d, pattern = "\\.csv$", full.names = TRUE)
-    if (length(files) == 0) return(NULL)
+    if (length(files) == 0) next
     latest_file <- files[which.max(file.info(files)$mtime)]
-    assign(basename(d), readr::read_csv(latest_file, show_col_types = FALSE),
+    assign(obj, readr::read_csv(latest_file, show_col_types = FALSE),
            envir = .GlobalEnv)
-  })
+    loaded <- c(loaded, obj)
+  }
+  loaded
+}
+
+# Backwards-compatible wrapper — the Shiny app still calls load_all_latest().
+load_all_latest <- function(base_dir = DATA_DIR) {
+  load_leaves(leaf_data_dirs(base_dir))
   invisible(NULL)
 }
-load_all_latest()
+
+# 1. Load whatever the pull scripts produced in data/.
+real_csvs <- if (dir.exists(DATA_DIR))
+  list.files(DATA_DIR, pattern = "[.]csv$", recursive = TRUE) else character()
+if (length(real_csvs) > 0) load_leaves(leaf_data_dirs(DATA_DIR))
+
+# 2. Fill any series the pull did not produce from the bundled sample.
+SAMPLE_SERIES <- load_leaves(leaf_data_dirs(SAMPLE_DIR), skip_existing = TRUE)
+
+# Flags the front ends use to caption the data honestly:
+#   USING_SAMPLE_DATA — no real data at all (a fresh keyless clone)
+#   PARTIAL_SAMPLE    — real data, but one or more series fell back to sample
+USING_SAMPLE_DATA <- length(real_csvs) == 0
+PARTIAL_SAMPLE    <- !USING_SAMPLE_DATA && length(SAMPLE_SERIES) > 0
+if (USING_SAMPLE_DATA) {
+  message("data/ is empty — rendering entirely from synthetic sample_data/. ",
+          "Run R/run_all.R with your own API keys to fetch real data.")
+} else if (PARTIAL_SAMPLE) {
+  message("Some series fell back to sample data (missing from data/): ",
+          paste(SAMPLE_SERIES, collapse = ", "))
+}
 
 # --- Labor: national unemployment rate -------------------------------------
 unrate_filtered <- unemployment_rate_UNRATE |>
