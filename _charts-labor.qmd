@@ -1,0 +1,90 @@
+::: {.chart-card}
+[National unemployment, seasonally adjusted]{.chart-title}
+```{r}
+p_unrate <- ggplot(unrate_filtered, aes(x = date, y = unrate_percent)) +
+  geom_line(color = LINE_COLOR, linewidth = 0.5) +
+  geom_hline(yintercept = unrate_mean, linetype = "dotted",
+             color = ANNOT_COLOR, linewidth = 0.6) +
+  annotate("text", x = min(unrate_filtered$date, na.rm = TRUE), y = unrate_mean,
+           label = paste0("Historic Average (", round(unrate_mean, 1), "%)"),
+           hjust = 0, vjust = -0.7, size = 3, color = "#8c8c8c") +
+  geom_vline(xintercept = ELECTION_DATE, linetype = "dashed", color = ELECTION_COLOR) +
+  labs(x = NULL, y = "Percentage",
+       caption = "Source: U.S. Bureau of Labor Statistics via FRED | Monthly") +
+  theme_snapshot()
+plotly_chart(p_unrate)
+```
+
+The national unemployment rate measures the share of the labor force that is
+jobless and actively seeking work. The dotted line shows the period average.
+:::
+
+::: {.chart-card}
+[Nonfarm private payroll employment]{.chart-title}
+```{r}
+adp |>
+  line_chart(yvar = persons / 1e6, y_lab = "Persons (millions)",
+             caption = "Source: Automatic Data Processing, Inc. via FRED | Monthly")
+```
+
+Total nonfarm private payroll employment tracks the number of paid workers
+across all industries except government, farm, private household, and non-profit
+employees.
+:::
+
+::: {.chart-card}
+[Large-state continued unemployment claims]{.chart-title}
+```{r}
+p_large <- ggplot(group2_data, aes(x = date, y = unemployment_rate, color = state)) +
+  geom_line() +
+  geom_vline(xintercept = ELECTION_DATE, linetype = "dashed", color = ELECTION_COLOR) +
+  scale_colour_manual(values = okabe_ito, name = NULL) +
+  labs(x = NULL, y = "Continued claims rate (%)",
+       caption = "Source: U.S. Bureau of Labor Statistics via FRED | Monthly average") +
+  theme_snapshot()
+plotly_chart(p_large)
+```
+
+Continued unemployment insurance claims as a percentage of each state's
+civilian labor force, for the five largest states by population plus DC.
+:::
+
+::: {.chart-card}
+[Total job openings (JOLTS)]{.chart-title}
+```{r}
+jolts_dat |>
+  line_chart(yvar = value / 1000, y_lab = "Job openings (millions)",
+             line_color = okabe_ito[2],
+             caption = "Source: U.S. Bureau of Labor Statistics via FRED | Monthly")
+```
+
+Total job openings from the Bureau of Labor Statistics Job Openings and Labor
+Turnover Survey (JOLTS), which counts all open positions at the end of each
+reference month regardless of how they are advertised.
+:::
+
+::: {.chart-card}
+[Initial jobless claims (4-week average)]{.chart-title}
+```{r}
+initial_claims_dat |>
+  line_chart(yvar = value, y_lab = "Claims",
+             caption = "Source: U.S. Employment and Training Administration via FRED | Weekly")
+```
+
+New claims for unemployment benefits, smoothed as a four-week moving average.
+One of the timeliest labor-market signals — a sustained rise often flags
+weakening before it shows up in the monthly unemployment rate.
+:::
+
+::: {.chart-card}
+[Median wage growth]{.chart-title}
+```{r}
+wage_growth_dat |>
+  line_chart(yvar = value, y_lab = "Percent",
+             caption = "Source: Federal Reserve Bank of Atlanta via FRED | Monthly")
+```
+
+The Atlanta Fed's Wage Growth Tracker: the median year-over-year growth in
+hourly wages for individuals, a three-month moving average. Because it follows
+the same people over time, it is less distorted by shifts in who is employed.
+:::

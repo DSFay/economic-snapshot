@@ -1,0 +1,14 @@
+---
+title: "Market indicators"
+---
+
+{{< include _setup.qmd >}}
+
+{{< include _view-toggle.qmd >}}
+
+::: {.chart-grid .view-stacked}
+{{< include _charts-markets.qmd >}}
+:::
+
+
+{{< include _footer.qmd >}}

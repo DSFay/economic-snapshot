@@ -1,0 +1,40 @@
+---
+title: "All indicators"
+---
+
+{{< include _setup.qmd >}}
+
+{{< include _view-toggle.qmd >}}
+
+## Labor
+
+::: {.chart-grid .view-stacked}
+{{< include _charts-labor.qmd >}}
+:::
+
+## Consumers
+
+::: {.chart-grid .view-stacked}
+{{< include _charts-consumers.qmd >}}
+:::
+
+## Travel
+
+::: {.chart-grid .view-stacked}
+{{< include _charts-travel.qmd >}}
+:::
+
+## Public health
+
+::: {.chart-grid .view-stacked}
+{{< include _charts-health.qmd >}}
+:::
+
+## Markets
+
+::: {.chart-grid .view-stacked}
+{{< include _charts-markets.qmd >}}
+:::
+
+
+{{< include _footer.qmd >}}

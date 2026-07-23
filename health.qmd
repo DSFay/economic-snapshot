@@ -1,0 +1,24 @@
+---
+title: "Public health indicators"
+---
+
+{{< include _setup.qmd >}}
+
+{{< include _view-toggle.qmd >}}
+
+::: {.chart-grid .view-stacked}
+{{< include _charts-health.qmd >}}
+:::
+
+**About measles outbreaks.** Measles was declared eliminated in the United
+States in 2000. Since then, cases have occurred primarily in unvaccinated
+individuals or through importation from countries with ongoing transmission. The
+2025 TX/NM outbreak was centered in a low-vaccination community in West Texas and
+spread to New Mexico, the largest U.S. outbreak in recent years. The 2026 TX
+outbreak peaked in January 2026, concentrated among school-age children in
+counties with below-average MMR vaccination rates. The CDC recommends two doses
+of the MMR vaccine for full protection; measles is highly contagious, and one
+infected person can spread the virus to 9 to 18 others.
+
+
+{{< include _footer.qmd >}}

@@ -1,0 +1,7 @@
+```{=html}
+<div class="view-toggle">
+  <span class="vt-label">View</span>
+  <button type="button" class="vt-btn active" data-view="stacked">Stacked</button>
+  <button type="button" class="vt-btn" data-view="row">Side by side</button>
+</div>
+```

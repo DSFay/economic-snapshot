@@ -1,0 +1,72 @@
+name: Rebuild and deploy
+
+# Weekly refresh: pull the latest data from the public sources, re-render the
+# Quarto site, and publish it to GitHub Pages. Also runs on demand and on any
+# push to main so the live site tracks the repo.
+on:
+  schedule:
+    - cron: "0 11 * * 1"   # Mondays, 11:00 UTC
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+# Least-privilege permissions the Pages deploy needs.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Never run two deploys at once; let an in-flight one finish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true   # install package binaries, don't compile
+
+      - name: Restore R packages from renv.lock
+        uses: r-lib/actions/setup-renv@v2
+
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      # The pull scripts read keys from creds/*.env (see R/fred_api_pull.R).
+      # Recreate those files from encrypted repo secrets; creds/ is gitignored,
+      # and the runner is ephemeral, so the keys never persist or get committed.
+      - name: Write API credentials from secrets
+        run: |
+          mkdir -p creds
+          printf 'FRED_API_KEY=%s\n' "${{ secrets.FRED_API_KEY }}" > creds/fred_creds.env
+          printf 'BLS_API_KEY=%s\n'  "${{ secrets.BLS_API_KEY }}"  > creds/bls_creds.env
+
+      # run_all.R wraps each source in tryCatch, so one flaky source doesn't
+      # fail the whole build; it exits 0 and the render uses whatever landed.
+      - name: Pull latest data
+        run: Rscript R/run_all.R
+
+      - name: Render the site
+        run: quarto render
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

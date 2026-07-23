@@ -1,0 +1,24 @@
+::: {.chart-card}
+[Measles cases by rash onset]{.chart-title}
+```{r}
+outbreak_labels <- data.frame(
+  week_start = as.Date(c("2025-03-30", "2026-01-11")),
+  label = c("2025 TX/NM Outbreak", "2026 TX Outbreak")
+) |>
+  left_join(measles_dat |> select(week_start, cases), by = "week_start")
+
+p_measles <- ggplot(measles_dat, aes(x = week_start, y = cases)) +
+  geom_col(width = 5, fill = "grey30") +
+  geom_text(data = outbreak_labels,
+            aes(x = week_start, y = cases, label = label),
+            vjust = -0.5, size = 3, color = "grey30") +
+  labs(x = NULL, y = "Cases",
+       caption = "Source: U.S. Centers for Disease Control and Prevention | Weekly") +
+  theme_snapshot()
+plotly_chart(p_measles)
+```
+
+Confirmed measles cases in the United States by week of rash onset. Cases were
+near zero for several years before a surge beginning in late 2024 linked
+primarily to unvaccinated communities.
+:::

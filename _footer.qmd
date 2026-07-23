@@ -1,0 +1,11 @@
+```{r}
+#| echo: false
+#| output: asis
+if (!exists("DATA_THROUGH")) source(here::here("R", "global.R"))
+cat(sprintf(paste0(
+  '<div class="site-footer">',
+  '<span>Data through %s</span>',
+  '<span>Sources are noted on each chart</span>',
+  '<span>Built by Faelynn Carroll</span>',
+  '</div>'), format(DATA_THROUGH, "%B %Y")))
+```

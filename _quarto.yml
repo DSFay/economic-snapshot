@@ -1,0 +1,81 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Economic Snapshot"
+  sidebar:
+    style: docked
+    background: light
+    search: false
+    collapse-level: 1
+    contents:
+      - href: labor.qmd
+        text: Labor
+      - href: consumers.qmd
+        text: Consumers
+      - href: travel.qmd
+        text: Travel
+      - href: health.qmd
+        text: Public health
+      - href: markets.qmd
+        text: Markets
+      - href: all.qmd
+        text: All indicators
+      - href: about.qmd
+        text: About
+
+format:
+  html:
+    theme: [litera, custom.scss]
+    toc: false
+    page-layout: full
+    include-in-header:
+      text: |
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
+    include-after-body:
+      text: |
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          // Hero stats: swap which baseline the "change since" figure uses.
+          var kpiSel = document.getElementById('kpi-baseline');
+          if (kpiSel) {
+            var applyKpi = function () {
+              document.querySelectorAll('.kpi-card').forEach(function (card) {
+                var el = card.querySelector('.kpi-value');
+                if (el) el.innerHTML = card.getAttribute('data-' + kpiSel.value) || '';
+              });
+            };
+            kpiSel.addEventListener('change', applyKpi);
+            applyKpi();
+          }
+
+          // Chart layout: stacked vs side-by-side.
+          var grids = document.querySelectorAll('.chart-grid');
+          if (!grids.length) return;
+          function resizePlots() {
+            if (!window.Plotly) return;
+            document.querySelectorAll('.js-plotly-plot').forEach(function (gd) {
+              window.Plotly.Plots.resize(gd);
+            });
+          }
+          document.querySelectorAll('.view-toggle .vt-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              var view = btn.getAttribute('data-view');
+              grids.forEach(function (g) {
+                g.classList.remove('view-stacked', 'view-row');
+                g.classList.add('view-' + view);
+              });
+              document.querySelectorAll('.view-toggle .vt-btn').forEach(function (b) {
+                b.classList.toggle('active', b === btn);
+              });
+              setTimeout(resizePlots, 80);
+            });
+          });
+        });
+        </script>
+
+execute:
+  echo: false
+  warning: false
+  message: false

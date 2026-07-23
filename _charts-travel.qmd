@@ -1,0 +1,44 @@
+::: {.chart-card}
+[Top 10 countries for tourists visiting the US]{.chart-title}
+```{r}
+p_tourist <- ggplot(top_10_tourist_origins,
+                    aes(x = date, y = total_visitors_100k, color = country)) +
+  geom_line() +
+  geom_vline(xintercept = ELECTION_DATE, linetype = "dashed", color = ELECTION_COLOR) +
+  scale_colour_manual(values = rep(palette_10, length.out = 30), name = NULL) +
+  labs(x = NULL, y = "Visitors (100k)",
+       caption = "Source: International Trade Administration (I-94) | Monthly") +
+  theme_snapshot()
+plotly_chart(p_tourist)
+```
+
+Arrivals to the United States from the top 10 source countries, from I-94
+border crossing data. Hover a line, or use the legend, to identify each country.
+:::
+
+::: {.chart-card}
+[TSA checkpoint volume]{.chart-title}
+```{r}
+tsa_weekly |>
+  line_chart(xvar = week_start, yvar = encounters_10k, y_lab = "Encounters (10k)",
+             caption = "Source: Transportation Security Administration | Daily, aggregated weekly")
+```
+
+Passenger throughput at Transportation Security Administration checkpoints — a
+direct read on how many people are moving through US airports, and a useful
+proxy for both business and leisure travel demand.
+:::
+
+::: {.chart-card}
+[Airline passenger load factor]{.chart-title}
+```{r}
+loadfactor_dat |>
+  line_chart(yvar = value, y_lab = "Percent",
+             caption = "Source: U.S. Bureau of Transportation Statistics via FRED | Monthly")
+```
+
+The share of available airline seats that are actually filled, across domestic
+and international US carriers. Where TSA volumes show how many people are
+flying, load factor shows how tightly airlines are matching capacity to that
+demand — high values mean full planes and little slack.
+:::

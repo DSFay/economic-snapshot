@@ -1,0 +1,301 @@
+/*-- scss:defaults --*/
+// Clean & minimal theme for the Economic Snapshot page.
+$font-family-sans-serif: "Inter", system-ui, -apple-system, sans-serif;
+$font-family-base: "Inter", system-ui, -apple-system, sans-serif;
+$body-color: #333333;
+$body-bg: #ffffff;
+$link-color: #4f46e5;
+$headings-font-weight: 500;
+$toc-color: #9a9a9a;
+
+/*-- scss:rules --*/
+body, p, li, blockquote, .quarto-title-block {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+body {
+  font-weight: 300;
+  letter-spacing: -0.003em;
+  line-height: 1.7;
+}
+
+// Title block: light, roomy
+.quarto-title-block .title {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-size: 2rem;
+  color: #111111;
+}
+#title-block-header {
+  margin-bottom: 1.4rem;
+}
+
+// --- Landing-page hero: thesis lead + credibility meta-line --------------
+.hero {
+  margin: 0 0 2rem;
+}
+.hero .lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #2a2a2a;
+  max-width: 40rem;
+  margin: 0 0 0.85rem;
+}
+.hero .hero-meta {
+  font-size: 0.8rem;
+  color: #9a9a9a;
+  letter-spacing: 0.01em;
+  margin: 0;
+  max-width: none;
+}
+
+// Section headers: quiet, well-spaced, no heavy underline rule
+h1, h2, h3 {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #1c1c1c;
+  border-bottom: none;
+}
+h1 {
+  font-size: 1.3rem;
+  margin-top: 3.5rem;
+  padding-bottom: 0;
+}
+
+// Left sidebar navigation: quiet, minimal, black links with a violet active
+// state. The site title doubles as the link home.
+.sidebar {
+  border-right: 1px solid #f0f0f0;
+  background: #ffffff !important;
+}
+.sidebar .sidebar-title a {
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #111111 !important;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+// Menu links: black by default...
+.sidebar-navigation .sidebar-link,
+.sidebar-navigation .sidebar-link .menu-text {
+  color: #1c1c1c !important;
+  font-size: 0.92rem;
+  text-decoration: none;
+}
+// ...violet for the page you're currently on.
+.sidebar-navigation .sidebar-link.active,
+.sidebar-navigation .sidebar-link.active .menu-text,
+.sidebar-navigation .sidebar-link:hover,
+.sidebar-navigation .sidebar-link:hover .menu-text {
+  color: #4f46e5 !important;
+}
+.sidebar-navigation .sidebar-link.active .menu-text {
+  font-weight: 500;
+}
+
+// Body copy: muted, readable
+p {
+  color: #4b4b4b;
+  max-width: 46rem;
+}
+
+// --- Chart grid + stacked / side-by-side view toggle ---------------------
+.view-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0.5rem 0 2rem;
+}
+.view-toggle .vt-label {
+  font-size: 0.82rem;
+  color: #9a9a9a;
+  margin-right: 2px;
+}
+.view-toggle .vt-btn {
+  border: 1px solid #e2e2e6;
+  background: #f7f7f8;
+  color: #6b7280;
+  padding: 5px 13px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-family: inherit;
+  cursor: pointer;
+}
+.view-toggle .vt-btn.active {
+  background: #e4e4fb;
+  border-color: #c9c9f5;
+  color: #4f46e5;
+}
+
+// Stacked (portrait): one chart per row, capped at a readable width.
+.chart-grid.view-stacked {
+  display: grid;
+  grid-template-columns: minmax(0, 900px);
+  gap: 1rem;
+}
+// Side by side (landscape): a horizontal strip of comfortably-sized charts;
+// scroll right to reach the ones that don't fit on screen.
+.chart-grid.view-row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1.75rem;
+  padding-bottom: 1rem;
+  scroll-snap-type: x proximity;
+}
+.chart-grid.view-row .chart-card {
+  flex: 0 0 clamp(340px, 40vw, 560px);
+  scroll-snap-align: start;
+}
+.chart-card {
+  min-width: 0;
+  margin-bottom: 1.5rem;
+}
+// Chart title as HTML above the plot, so it wraps instead of truncating.
+.chart-title {
+  display: block;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #1c1c1c;
+  line-height: 1.3;
+  margin: 0 0 6px;
+}
+.chart-card p {
+  max-width: none;
+  font-size: 0.95rem;
+}
+
+// --- Landing-page category cards -----------------------------------------
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0 1rem;
+}
+.category-card {
+  display: block;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  padding: 1.1rem 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease;
+}
+.category-card:hover {
+  border-color: #c9c9f5;
+}
+.category-card .cc-title {
+  font-weight: 500;
+  color: #1c1c1c;
+  margin-bottom: 4px;
+}
+.category-card .cc-desc {
+  font-size: 0.85rem;
+  color: #8c8c8c;
+  line-height: 1.5;
+}
+
+// --- Landing-page hero stat tiles ----------------------------------------
+.kpi-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 2rem 0 0.75rem;
+  font-size: 0.82rem;
+  color: #9a9a9a;
+}
+.kpi-controls select {
+  font-family: inherit;
+  font-size: 0.82rem;
+  color: #4b4b4b;
+  background: #ffffff;
+  border: 1px solid #e2e2e6;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin: 0 0 2.5rem;
+}
+.kpi-card {
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+}
+.kpi-label {
+  font-size: 0.8rem;
+  color: #8c8c8c;
+  margin-bottom: 6px;
+}
+// The headline figure is the CHANGE since the selected baseline. Colour stays
+// neutral on purpose — up/down isn't good/bad across indicators; the arrow
+// carries the direction.
+.kpi-value {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #111111;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+// "vs October 2024" caption under the headline change.
+.kpi-sub {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: #9a9a9a;
+  letter-spacing: 0;
+  margin-top: 4px;
+}
+// The current level, demoted to a small supporting line.
+.kpi-current {
+  font-size: 0.8rem;
+  color: #9a9a9a;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #f2f2f2;
+}
+.kpi-asof {
+  color: #c0c0c0;
+  margin-left: 4px;
+}
+
+// --- Site footer ----------------------------------------------------------
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.5rem;
+  margin: 4rem 0 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #f0f0f0;
+  font-size: 0.8rem;
+  color: #a0a0a0;
+}
+.site-footer a {
+  color: #8c8c8c;
+  text-decoration: underline;
+}
+.site-footer a:hover {
+  color: #4f46e5;
+}
+
+// Breathing room around each chart + its blurb
+.cell {
+  margin: 1.5rem 0 1rem;
+}
+
+// Minimal, quiet table of contents
+#TOC {
+  font-size: 0.82rem;
+  font-weight: 300;
+}
+.sidebar nav[role="doc-toc"] ul > li > a.active {
+  color: #4f46e5;
+  border-left-color: #4f46e5;
+}
+
+// Soften the sample-data callout to match the minimal palette
+.callout.callout-style-default {
+  border-radius: 8px;
+}

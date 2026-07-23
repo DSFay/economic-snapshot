@@ -1,0 +1,811 @@
+country,world_region,date,visitors,year,month
+Argentina,South America,2022-01-01,85377,2022,1
+Argentina,South America,2022-02-01,84129,2022,2
+Argentina,South America,2022-03-01,100649,2022,3
+Argentina,South America,2022-04-01,97302,2022,4
+Argentina,South America,2022-05-01,91384,2022,5
+Argentina,South America,2022-06-01,94114,2022,6
+Argentina,South America,2022-07-01,93916,2022,7
+Argentina,South America,2022-08-01,59630,2022,8
+Argentina,South America,2022-09-01,63526,2022,9
+Argentina,South America,2022-10-01,61201,2022,10
+Argentina,South America,2022-11-01,60242,2022,11
+Argentina,South America,2022-12-01,71523,2022,12
+Argentina,South America,2023-01-01,86072,2023,1
+Argentina,South America,2023-02-01,92049,2023,2
+Argentina,South America,2023-03-01,99125,2023,3
+Argentina,South America,2023-04-01,109360,2023,4
+Argentina,South America,2023-05-01,103787,2023,5
+Argentina,South America,2023-06-01,78116,2023,6
+Argentina,South America,2023-07-01,86188,2023,7
+Argentina,South America,2023-08-01,82124,2023,8
+Argentina,South America,2023-09-01,62232,2023,9
+Argentina,South America,2023-10-01,55415,2023,10
+Argentina,South America,2023-11-01,67331,2023,11
+Argentina,South America,2023-12-01,67862,2023,12
+Argentina,South America,2024-01-01,77637,2024,1
+Argentina,South America,2024-02-01,80676,2024,2
+Argentina,South America,2024-03-01,92145,2024,3
+Argentina,South America,2024-04-01,90443,2024,4
+Argentina,South America,2024-05-01,89497,2024,5
+Argentina,South America,2024-06-01,98932,2024,6
+Argentina,South America,2024-07-01,79635,2024,7
+Argentina,South America,2024-08-01,65683,2024,8
+Argentina,South America,2024-09-01,65305,2024,9
+Argentina,South America,2024-10-01,47033,2024,10
+Argentina,South America,2024-11-01,65658,2024,11
+Argentina,South America,2024-12-01,66866,2024,12
+Argentina,South America,2025-01-01,92804,2025,1
+Argentina,South America,2025-02-01,91454,2025,2
+Argentina,South America,2025-03-01,105701,2025,3
+Argentina,South America,2025-04-01,106499,2025,4
+Argentina,South America,2025-05-01,105940,2025,5
+Argentina,South America,2025-06-01,84725,2025,6
+Argentina,South America,2025-07-01,79766,2025,7
+Argentina,South America,2025-08-01,71727,2025,8
+Argentina,South America,2025-09-01,67524,2025,9
+Argentina,South America,2025-10-01,62351,2025,10
+Argentina,South America,2025-11-01,59490,2025,11
+Argentina,South America,2025-12-01,70242,2025,12
+Argentina,South America,2026-01-01,74025,2026,1
+Argentina,South America,2026-02-01,92185,2026,2
+Argentina,South America,2026-03-01,99845,2026,3
+Argentina,South America,2026-04-01,94210,2026,4
+Argentina,South America,2026-05-01,97020,2026,5
+Argentina,South America,2026-06-01,101807,2026,6
+Australia,Oceania,2022-01-01,116782,2022,1
+Australia,Oceania,2022-02-01,108556,2022,2
+Australia,Oceania,2022-03-01,108083,2022,3
+Australia,Oceania,2022-04-01,126823,2022,4
+Australia,Oceania,2022-05-01,124747,2022,5
+Australia,Oceania,2022-06-01,111391,2022,6
+Australia,Oceania,2022-07-01,100368,2022,7
+Australia,Oceania,2022-08-01,79727,2022,8
+Australia,Oceania,2022-09-01,81729,2022,9
+Australia,Oceania,2022-10-01,86280,2022,10
+Australia,Oceania,2022-11-01,77274,2022,11
+Australia,Oceania,2022-12-01,80220,2022,12
+Australia,Oceania,2023-01-01,92941,2023,1
+Australia,Oceania,2023-02-01,103666,2023,2
+Australia,Oceania,2023-03-01,109435,2023,3
+Australia,Oceania,2023-04-01,131049,2023,4
+Australia,Oceania,2023-05-01,127131,2023,5
+Australia,Oceania,2023-06-01,109088,2023,6
+Australia,Oceania,2023-07-01,101914,2023,7
+Australia,Oceania,2023-08-01,97851,2023,8
+Australia,Oceania,2023-09-01,74417,2023,9
+Australia,Oceania,2023-10-01,78588,2023,10
+Australia,Oceania,2023-11-01,75612,2023,11
+Australia,Oceania,2023-12-01,81088,2023,12
+Australia,Oceania,2024-01-01,98865,2024,1
+Australia,Oceania,2024-02-01,112300,2024,2
+Australia,Oceania,2024-03-01,119493,2024,3
+Australia,Oceania,2024-04-01,124642,2024,4
+Australia,Oceania,2024-05-01,121644,2024,5
+Australia,Oceania,2024-06-01,118825,2024,6
+Australia,Oceania,2024-07-01,113907,2024,7
+Australia,Oceania,2024-08-01,84807,2024,8
+Australia,Oceania,2024-09-01,77716,2024,9
+Australia,Oceania,2024-10-01,79862,2024,10
+Australia,Oceania,2024-11-01,85664,2024,11
+Australia,Oceania,2024-12-01,90465,2024,12
+Australia,Oceania,2025-01-01,106689,2025,1
+Australia,Oceania,2025-02-01,112944,2025,2
+Australia,Oceania,2025-03-01,118468,2025,3
+Australia,Oceania,2025-04-01,102593,2025,4
+Australia,Oceania,2025-05-01,127324,2025,5
+Australia,Oceania,2025-06-01,116185,2025,6
+Australia,Oceania,2025-07-01,93398,2025,7
+Australia,Oceania,2025-08-01,89107,2025,8
+Australia,Oceania,2025-09-01,79653,2025,9
+Australia,Oceania,2025-10-01,64264,2025,10
+Australia,Oceania,2025-11-01,75764,2025,11
+Australia,Oceania,2025-12-01,89874,2025,12
+Australia,Oceania,2026-01-01,77271,2026,1
+Australia,Oceania,2026-02-01,108858,2026,2
+Australia,Oceania,2026-03-01,125235,2026,3
+Australia,Oceania,2026-04-01,119532,2026,4
+Australia,Oceania,2026-05-01,122666,2026,5
+Australia,Oceania,2026-06-01,98496,2026,6
+Brazil,South America,2022-01-01,294855,2022,1
+Brazil,South America,2022-02-01,360071,2022,2
+Brazil,South America,2022-03-01,396818,2022,3
+Brazil,South America,2022-04-01,350369,2022,4
+Brazil,South America,2022-05-01,361144,2022,5
+Brazil,South America,2022-06-01,327456,2022,6
+Brazil,South America,2022-07-01,357770,2022,7
+Brazil,South America,2022-08-01,256255,2022,8
+Brazil,South America,2022-09-01,238428,2022,9
+Brazil,South America,2022-10-01,228723,2022,10
+Brazil,South America,2022-11-01,222339,2022,11
+Brazil,South America,2022-12-01,244667,2022,12
+Brazil,South America,2023-01-01,335225,2023,1
+Brazil,South America,2023-02-01,329207,2023,2
+Brazil,South America,2023-03-01,382446,2023,3
+Brazil,South America,2023-04-01,367189,2023,4
+Brazil,South America,2023-05-01,347020,2023,5
+Brazil,South America,2023-06-01,312171,2023,6
+Brazil,South America,2023-07-01,268394,2023,7
+Brazil,South America,2023-08-01,241159,2023,8
+Brazil,South America,2023-09-01,221379,2023,9
+Brazil,South America,2023-10-01,238444,2023,10
+Brazil,South America,2023-11-01,237673,2023,11
+Brazil,South America,2023-12-01,255670,2023,12
+Brazil,South America,2024-01-01,292004,2024,1
+Brazil,South America,2024-02-01,397908,2024,2
+Brazil,South America,2024-03-01,394578,2024,3
+Brazil,South America,2024-04-01,360582,2024,4
+Brazil,South America,2024-05-01,386237,2024,5
+Brazil,South America,2024-06-01,342505,2024,6
+Brazil,South America,2024-07-01,295142,2024,7
+Brazil,South America,2024-08-01,276818,2024,8
+Brazil,South America,2024-09-01,239652,2024,9
+Brazil,South America,2024-10-01,280950,2024,10
+Brazil,South America,2024-11-01,228453,2024,11
+Brazil,South America,2024-12-01,254301,2024,12
+Brazil,South America,2025-01-01,308422,2025,1
+Brazil,South America,2025-02-01,321925,2025,2
+Brazil,South America,2025-03-01,402557,2025,3
+Brazil,South America,2025-04-01,394324,2025,4
+Brazil,South America,2025-05-01,345715,2025,5
+Brazil,South America,2025-06-01,394565,2025,6
+Brazil,South America,2025-07-01,302409,2025,7
+Brazil,South America,2025-08-01,276217,2025,8
+Brazil,South America,2025-09-01,214473,2025,9
+Brazil,South America,2025-10-01,200957,2025,10
+Brazil,South America,2025-11-01,228489,2025,11
+Brazil,South America,2025-12-01,278990,2025,12
+Brazil,South America,2026-01-01,281739,2026,1
+Brazil,South America,2026-02-01,344874,2026,2
+Brazil,South America,2026-03-01,360489,2026,3
+Brazil,South America,2026-04-01,386551,2026,4
+Brazil,South America,2026-05-01,346312,2026,5
+Brazil,South America,2026-06-01,316219,2026,6
+Canada,North America,2022-01-01,1345925,2022,1
+Canada,North America,2022-02-01,1650408,2022,2
+Canada,North America,2022-03-01,1945376,2022,3
+Canada,North America,2022-04-01,1711036,2022,4
+Canada,North America,2022-05-01,1722974,2022,5
+Canada,North America,2022-06-01,1413269,2022,6
+Canada,North America,2022-07-01,1325087,2022,7
+Canada,North America,2022-08-01,1293433,2022,8
+Canada,North America,2022-09-01,1065287,2022,9
+Canada,North America,2022-10-01,1238673,2022,10
+Canada,North America,2022-11-01,1056706,2022,11
+Canada,North America,2022-12-01,1270739,2022,12
+Canada,North America,2023-01-01,1528566,2023,1
+Canada,North America,2023-02-01,1683152,2023,2
+Canada,North America,2023-03-01,1994292,2023,3
+Canada,North America,2023-04-01,2071530,2023,4
+Canada,North America,2023-05-01,1708627,2023,5
+Canada,North America,2023-06-01,1434184,2023,6
+Canada,North America,2023-07-01,1442752,2023,7
+Canada,North America,2023-08-01,1459464,2023,8
+Canada,North America,2023-09-01,1215416,2023,9
+Canada,North America,2023-10-01,1239217,2023,10
+Canada,North America,2023-11-01,1371437,2023,11
+Canada,North America,2023-12-01,1390927,2023,12
+Canada,North America,2024-01-01,1523511,2024,1
+Canada,North America,2024-02-01,1744168,2024,2
+Canada,North America,2024-03-01,1906643,2024,3
+Canada,North America,2024-04-01,2049458,2024,4
+Canada,North America,2024-05-01,1805489,2024,5
+Canada,North America,2024-06-01,1742632,2024,6
+Canada,North America,2024-07-01,1262568,2024,7
+Canada,North America,2024-08-01,1265363,2024,8
+Canada,North America,2024-09-01,1358159,2024,9
+Canada,North America,2024-10-01,1017819,2024,10
+Canada,North America,2024-11-01,1302426,2024,11
+Canada,North America,2024-12-01,1411400,2024,12
+Canada,North America,2025-01-01,1535619,2025,1
+Canada,North America,2025-02-01,1803841,2025,2
+Canada,North America,2025-03-01,1857384,2025,3
+Canada,North America,2025-04-01,1744712,2025,4
+Canada,North America,2025-05-01,1610504,2025,5
+Canada,North America,2025-06-01,1608216,2025,6
+Canada,North America,2025-07-01,1528451,2025,7
+Canada,North America,2025-08-01,1278599,2025,8
+Canada,North America,2025-09-01,1190343,2025,9
+Canada,North America,2025-10-01,1298019,2025,10
+Canada,North America,2025-11-01,1077856,2025,11
+Canada,North America,2025-12-01,1206763,2025,12
+Canada,North America,2026-01-01,1390238,2026,1
+Canada,North America,2026-02-01,1615935,2026,2
+Canada,North America,2026-03-01,1593103,2026,3
+Canada,North America,2026-04-01,1906589,2026,4
+Canada,North America,2026-05-01,1703144,2026,5
+Canada,North America,2026-06-01,1736325,2026,6
+Colombia,South America,2022-01-01,283368,2022,1
+Colombia,South America,2022-02-01,328768,2022,2
+Colombia,South America,2022-03-01,362641,2022,3
+Colombia,South America,2022-04-01,353656,2022,4
+Colombia,South America,2022-05-01,346491,2022,5
+Colombia,South America,2022-06-01,383757,2022,6
+Colombia,South America,2022-07-01,310716,2022,7
+Colombia,South America,2022-08-01,268875,2022,8
+Colombia,South America,2022-09-01,243041,2022,9
+Colombia,South America,2022-10-01,264262,2022,10
+Colombia,South America,2022-11-01,270452,2022,11
+Colombia,South America,2022-12-01,253852,2022,12
+Colombia,South America,2023-01-01,359130,2023,1
+Colombia,South America,2023-02-01,375910,2023,2
+Colombia,South America,2023-03-01,374341,2023,3
+Colombia,South America,2023-04-01,418664,2023,4
+Colombia,South America,2023-05-01,410861,2023,5
+Colombia,South America,2023-06-01,359901,2023,6
+Colombia,South America,2023-07-01,291863,2023,7
+Colombia,South America,2023-08-01,229208,2023,8
+Colombia,South America,2023-09-01,277912,2023,9
+Colombia,South America,2023-10-01,267297,2023,10
+Colombia,South America,2023-11-01,251076,2023,11
+Colombia,South America,2023-12-01,269938,2023,12
+Colombia,South America,2024-01-01,335647,2024,1
+Colombia,South America,2024-02-01,381415,2024,2
+Colombia,South America,2024-03-01,407481,2024,3
+Colombia,South America,2024-04-01,396847,2024,4
+Colombia,South America,2024-05-01,395877,2024,5
+Colombia,South America,2024-06-01,381785,2024,6
+Colombia,South America,2024-07-01,312644,2024,7
+Colombia,South America,2024-08-01,313541,2024,8
+Colombia,South America,2024-09-01,252972,2024,9
+Colombia,South America,2024-10-01,268692,2024,10
+Colombia,South America,2024-11-01,267777,2024,11
+Colombia,South America,2024-12-01,271317,2024,12
+Colombia,South America,2025-01-01,321034,2025,1
+Colombia,South America,2025-02-01,312328,2025,2
+Colombia,South America,2025-03-01,441061,2025,3
+Colombia,South America,2025-04-01,385143,2025,4
+Colombia,South America,2025-05-01,367729,2025,5
+Colombia,South America,2025-06-01,370013,2025,6
+Colombia,South America,2025-07-01,294343,2025,7
+Colombia,South America,2025-08-01,276647,2025,8
+Colombia,South America,2025-09-01,279132,2025,9
+Colombia,South America,2025-10-01,274419,2025,10
+Colombia,South America,2025-11-01,240821,2025,11
+Colombia,South America,2025-12-01,263306,2025,12
+Colombia,South America,2026-01-01,302907,2026,1
+Colombia,South America,2026-02-01,332415,2026,2
+Colombia,South America,2026-03-01,397538,2026,3
+Colombia,South America,2026-04-01,371358,2026,4
+Colombia,South America,2026-05-01,405276,2026,5
+Colombia,South America,2026-06-01,331505,2026,6
+France,Europe,2022-01-01,140851,2022,1
+France,Europe,2022-02-01,164641,2022,2
+France,Europe,2022-03-01,183908,2022,3
+France,Europe,2022-04-01,212691,2022,4
+France,Europe,2022-05-01,202648,2022,5
+France,Europe,2022-06-01,203112,2022,6
+France,Europe,2022-07-01,148430,2022,7
+France,Europe,2022-08-01,133423,2022,8
+France,Europe,2022-09-01,134881,2022,9
+France,Europe,2022-10-01,121556,2022,10
+France,Europe,2022-11-01,126960,2022,11
+France,Europe,2022-12-01,150731,2022,12
+France,Europe,2023-01-01,143588,2023,1
+France,Europe,2023-02-01,183892,2023,2
+France,Europe,2023-03-01,188299,2023,3
+France,Europe,2023-04-01,226898,2023,4
+France,Europe,2023-05-01,204446,2023,5
+France,Europe,2023-06-01,169587,2023,6
+France,Europe,2023-07-01,139170,2023,7
+France,Europe,2023-08-01,164401,2023,8
+France,Europe,2023-09-01,123985,2023,9
+France,Europe,2023-10-01,116420,2023,10
+France,Europe,2023-11-01,108124,2023,11
+France,Europe,2023-12-01,141528,2023,12
+France,Europe,2024-01-01,173229,2024,1
+France,Europe,2024-02-01,181404,2024,2
+France,Europe,2024-03-01,225562,2024,3
+France,Europe,2024-04-01,194255,2024,4
+France,Europe,2024-05-01,213585,2024,5
+France,Europe,2024-06-01,199879,2024,6
+France,Europe,2024-07-01,162354,2024,7
+France,Europe,2024-08-01,154697,2024,8
+France,Europe,2024-09-01,107941,2024,9
+France,Europe,2024-10-01,99517,2024,10
+France,Europe,2024-11-01,98578,2024,11
+France,Europe,2024-12-01,158718,2024,12
+France,Europe,2025-01-01,140810,2025,1
+France,Europe,2025-02-01,171987,2025,2
+France,Europe,2025-03-01,183204,2025,3
+France,Europe,2025-04-01,209726,2025,4
+France,Europe,2025-05-01,212805,2025,5
+France,Europe,2025-06-01,188601,2025,6
+France,Europe,2025-07-01,155586,2025,7
+France,Europe,2025-08-01,149225,2025,8
+France,Europe,2025-09-01,118674,2025,9
+France,Europe,2025-10-01,114939,2025,10
+France,Europe,2025-11-01,112725,2025,11
+France,Europe,2025-12-01,136777,2025,12
+France,Europe,2026-01-01,159909,2026,1
+France,Europe,2026-02-01,171472,2026,2
+France,Europe,2026-03-01,202917,2026,3
+France,Europe,2026-04-01,223007,2026,4
+France,Europe,2026-05-01,209738,2026,5
+France,Europe,2026-06-01,189848,2026,6
+Germany,Europe,2022-01-01,187664,2022,1
+Germany,Europe,2022-02-01,190651,2022,2
+Germany,Europe,2022-03-01,237040,2022,3
+Germany,Europe,2022-04-01,235963,2022,4
+Germany,Europe,2022-05-01,211342,2022,5
+Germany,Europe,2022-06-01,197977,2022,6
+Germany,Europe,2022-07-01,205997,2022,7
+Germany,Europe,2022-08-01,164253,2022,8
+Germany,Europe,2022-09-01,132765,2022,9
+Germany,Europe,2022-10-01,141781,2022,10
+Germany,Europe,2022-11-01,138038,2022,11
+Germany,Europe,2022-12-01,153184,2022,12
+Germany,Europe,2023-01-01,183855,2023,1
+Germany,Europe,2023-02-01,192744,2023,2
+Germany,Europe,2023-03-01,204616,2023,3
+Germany,Europe,2023-04-01,230370,2023,4
+Germany,Europe,2023-05-01,214154,2023,5
+Germany,Europe,2023-06-01,187097,2023,6
+Germany,Europe,2023-07-01,160589,2023,7
+Germany,Europe,2023-08-01,161210,2023,8
+Germany,Europe,2023-09-01,142982,2023,9
+Germany,Europe,2023-10-01,129960,2023,10
+Germany,Europe,2023-11-01,154860,2023,11
+Germany,Europe,2023-12-01,143957,2023,12
+Germany,Europe,2024-01-01,174031,2024,1
+Germany,Europe,2024-02-01,201494,2024,2
+Germany,Europe,2024-03-01,236599,2024,3
+Germany,Europe,2024-04-01,226164,2024,4
+Germany,Europe,2024-05-01,230754,2024,5
+Germany,Europe,2024-06-01,201615,2024,6
+Germany,Europe,2024-07-01,150543,2024,7
+Germany,Europe,2024-08-01,163274,2024,8
+Germany,Europe,2024-09-01,150681,2024,9
+Germany,Europe,2024-10-01,130887,2024,10
+Germany,Europe,2024-11-01,142196,2024,11
+Germany,Europe,2024-12-01,168006,2024,12
+Germany,Europe,2025-01-01,179035,2025,1
+Germany,Europe,2025-02-01,195773,2025,2
+Germany,Europe,2025-03-01,225417,2025,3
+Germany,Europe,2025-04-01,231586,2025,4
+Germany,Europe,2025-05-01,216166,2025,5
+Germany,Europe,2025-06-01,189996,2025,6
+Germany,Europe,2025-07-01,193102,2025,7
+Germany,Europe,2025-08-01,155393,2025,8
+Germany,Europe,2025-09-01,134158,2025,9
+Germany,Europe,2025-10-01,148483,2025,10
+Germany,Europe,2025-11-01,127967,2025,11
+Germany,Europe,2025-12-01,157428,2025,12
+Germany,Europe,2026-01-01,208365,2026,1
+Germany,Europe,2026-02-01,201180,2026,2
+Germany,Europe,2026-03-01,225940,2026,3
+Germany,Europe,2026-04-01,231004,2026,4
+Germany,Europe,2026-05-01,220482,2026,5
+Germany,Europe,2026-06-01,190151,2026,6
+India,Asia,2022-01-01,119168,2022,1
+India,Asia,2022-02-01,172355,2022,2
+India,Asia,2022-03-01,164001,2022,3
+India,Asia,2022-04-01,170380,2022,4
+India,Asia,2022-05-01,169084,2022,5
+India,Asia,2022-06-01,172082,2022,6
+India,Asia,2022-07-01,143057,2022,7
+India,Asia,2022-08-01,123481,2022,8
+India,Asia,2022-09-01,103293,2022,9
+India,Asia,2022-10-01,103172,2022,10
+India,Asia,2022-11-01,97136,2022,11
+India,Asia,2022-12-01,120596,2022,12
+India,Asia,2023-01-01,151798,2023,1
+India,Asia,2023-02-01,171986,2023,2
+India,Asia,2023-03-01,196889,2023,3
+India,Asia,2023-04-01,177165,2023,4
+India,Asia,2023-05-01,177582,2023,5
+India,Asia,2023-06-01,179239,2023,6
+India,Asia,2023-07-01,125837,2023,7
+India,Asia,2023-08-01,112021,2023,8
+India,Asia,2023-09-01,120628,2023,9
+India,Asia,2023-10-01,87160,2023,10
+India,Asia,2023-11-01,104177,2023,11
+India,Asia,2023-12-01,112110,2023,12
+India,Asia,2024-01-01,127094,2024,1
+India,Asia,2024-02-01,146483,2024,2
+India,Asia,2024-03-01,204770,2024,3
+India,Asia,2024-04-01,170459,2024,4
+India,Asia,2024-05-01,169564,2024,5
+India,Asia,2024-06-01,168952,2024,6
+India,Asia,2024-07-01,164603,2024,7
+India,Asia,2024-08-01,132838,2024,8
+India,Asia,2024-09-01,103761,2024,9
+India,Asia,2024-10-01,104240,2024,10
+India,Asia,2024-11-01,110103,2024,11
+India,Asia,2024-12-01,128051,2024,12
+India,Asia,2025-01-01,137076,2025,1
+India,Asia,2025-02-01,163545,2025,2
+India,Asia,2025-03-01,184942,2025,3
+India,Asia,2025-04-01,161011,2025,4
+India,Asia,2025-05-01,175189,2025,5
+India,Asia,2025-06-01,169745,2025,6
+India,Asia,2025-07-01,142798,2025,7
+India,Asia,2025-08-01,127067,2025,8
+India,Asia,2025-09-01,114029,2025,9
+India,Asia,2025-10-01,111663,2025,10
+India,Asia,2025-11-01,123517,2025,11
+India,Asia,2025-12-01,126568,2025,12
+India,Asia,2026-01-01,146603,2026,1
+India,Asia,2026-02-01,152845,2026,2
+India,Asia,2026-03-01,155434,2026,3
+India,Asia,2026-04-01,169242,2026,4
+India,Asia,2026-05-01,172324,2026,5
+India,Asia,2026-06-01,148578,2026,6
+Italy,Europe,2022-01-01,131492,2022,1
+Italy,Europe,2022-02-01,153936,2022,2
+Italy,Europe,2022-03-01,124117,2022,3
+Italy,Europe,2022-04-01,154779,2022,4
+Italy,Europe,2022-05-01,148049,2022,5
+Italy,Europe,2022-06-01,118291,2022,6
+Italy,Europe,2022-07-01,123360,2022,7
+Italy,Europe,2022-08-01,93251,2022,8
+Italy,Europe,2022-09-01,115490,2022,9
+Italy,Europe,2022-10-01,81410,2022,10
+Italy,Europe,2022-11-01,83386,2022,11
+Italy,Europe,2022-12-01,111349,2022,12
+Italy,Europe,2023-01-01,119223,2023,1
+Italy,Europe,2023-02-01,131686,2023,2
+Italy,Europe,2023-03-01,153999,2023,3
+Italy,Europe,2023-04-01,162677,2023,4
+Italy,Europe,2023-05-01,146549,2023,5
+Italy,Europe,2023-06-01,129934,2023,6
+Italy,Europe,2023-07-01,112925,2023,7
+Italy,Europe,2023-08-01,107653,2023,8
+Italy,Europe,2023-09-01,105327,2023,9
+Italy,Europe,2023-10-01,80803,2023,10
+Italy,Europe,2023-11-01,100250,2023,11
+Italy,Europe,2023-12-01,113155,2023,12
+Italy,Europe,2024-01-01,107722,2024,1
+Italy,Europe,2024-02-01,126509,2024,2
+Italy,Europe,2024-03-01,150036,2024,3
+Italy,Europe,2024-04-01,145786,2024,4
+Italy,Europe,2024-05-01,152446,2024,5
+Italy,Europe,2024-06-01,134733,2024,6
+Italy,Europe,2024-07-01,118722,2024,7
+Italy,Europe,2024-08-01,99396,2024,8
+Italy,Europe,2024-09-01,97629,2024,9
+Italy,Europe,2024-10-01,93357,2024,10
+Italy,Europe,2024-11-01,84806,2024,11
+Italy,Europe,2024-12-01,90397,2024,12
+Italy,Europe,2025-01-01,107087,2025,1
+Italy,Europe,2025-02-01,149160,2025,2
+Italy,Europe,2025-03-01,127836,2025,3
+Italy,Europe,2025-04-01,149551,2025,4
+Italy,Europe,2025-05-01,150781,2025,5
+Italy,Europe,2025-06-01,125004,2025,6
+Italy,Europe,2025-07-01,117886,2025,7
+Italy,Europe,2025-08-01,85294,2025,8
+Italy,Europe,2025-09-01,86627,2025,9
+Italy,Europe,2025-10-01,105154,2025,10
+Italy,Europe,2025-11-01,92817,2025,11
+Italy,Europe,2025-12-01,98426,2025,12
+Italy,Europe,2026-01-01,117299,2026,1
+Italy,Europe,2026-02-01,154612,2026,2
+Italy,Europe,2026-03-01,144170,2026,3
+Italy,Europe,2026-04-01,155355,2026,4
+Italy,Europe,2026-05-01,147387,2026,5
+Italy,Europe,2026-06-01,137374,2026,6
+Japan,Asia,2022-01-01,257569,2022,1
+Japan,Asia,2022-02-01,298884,2022,2
+Japan,Asia,2022-03-01,311698,2022,3
+Japan,Asia,2022-04-01,316942,2022,4
+Japan,Asia,2022-05-01,278536,2022,5
+Japan,Asia,2022-06-01,271877,2022,6
+Japan,Asia,2022-07-01,250343,2022,7
+Japan,Asia,2022-08-01,222639,2022,8
+Japan,Asia,2022-09-01,190209,2022,9
+Japan,Asia,2022-10-01,177886,2022,10
+Japan,Asia,2022-11-01,203402,2022,11
+Japan,Asia,2022-12-01,212655,2022,12
+Japan,Asia,2023-01-01,233422,2023,1
+Japan,Asia,2023-02-01,285766,2023,2
+Japan,Asia,2023-03-01,264527,2023,3
+Japan,Asia,2023-04-01,302311,2023,4
+Japan,Asia,2023-05-01,314194,2023,5
+Japan,Asia,2023-06-01,275098,2023,6
+Japan,Asia,2023-07-01,257839,2023,7
+Japan,Asia,2023-08-01,233181,2023,8
+Japan,Asia,2023-09-01,193330,2023,9
+Japan,Asia,2023-10-01,161126,2023,10
+Japan,Asia,2023-11-01,216557,2023,11
+Japan,Asia,2023-12-01,252274,2023,12
+Japan,Asia,2024-01-01,278410,2024,1
+Japan,Asia,2024-02-01,271850,2024,2
+Japan,Asia,2024-03-01,315087,2024,3
+Japan,Asia,2024-04-01,295744,2024,4
+Japan,Asia,2024-05-01,307941,2024,5
+Japan,Asia,2024-06-01,251321,2024,6
+Japan,Asia,2024-07-01,258620,2024,7
+Japan,Asia,2024-08-01,200952,2024,8
+Japan,Asia,2024-09-01,180768,2024,9
+Japan,Asia,2024-10-01,170090,2024,10
+Japan,Asia,2024-11-01,210329,2024,11
+Japan,Asia,2024-12-01,198749,2024,12
+Japan,Asia,2025-01-01,256206,2025,1
+Japan,Asia,2025-02-01,285707,2025,2
+Japan,Asia,2025-03-01,298173,2025,3
+Japan,Asia,2025-04-01,308995,2025,4
+Japan,Asia,2025-05-01,312680,2025,5
+Japan,Asia,2025-06-01,305235,2025,6
+Japan,Asia,2025-07-01,245035,2025,7
+Japan,Asia,2025-08-01,227757,2025,8
+Japan,Asia,2025-09-01,197183,2025,9
+Japan,Asia,2025-10-01,175036,2025,10
+Japan,Asia,2025-11-01,204408,2025,11
+Japan,Asia,2025-12-01,248736,2025,12
+Japan,Asia,2026-01-01,273460,2026,1
+Japan,Asia,2026-02-01,263913,2026,2
+Japan,Asia,2026-03-01,288195,2026,3
+Japan,Asia,2026-04-01,305891,2026,4
+Japan,Asia,2026-05-01,277243,2026,5
+Japan,Asia,2026-06-01,338198,2026,6
+Mexico,North America,2022-01-01,1177701,2022,1
+Mexico,North America,2022-02-01,1413444,2022,2
+Mexico,North America,2022-03-01,1278105,2022,3
+Mexico,North America,2022-04-01,1367998,2022,4
+Mexico,North America,2022-05-01,1487774,2022,5
+Mexico,North America,2022-06-01,1335698,2022,6
+Mexico,North America,2022-07-01,1285837,2022,7
+Mexico,North America,2022-08-01,1092175,2022,8
+Mexico,North America,2022-09-01,926965,2022,9
+Mexico,North America,2022-10-01,904383,2022,10
+Mexico,North America,2022-11-01,1050996,2022,11
+Mexico,North America,2022-12-01,1112014,2022,12
+Mexico,North America,2023-01-01,1092299,2023,1
+Mexico,North America,2023-02-01,1316196,2023,2
+Mexico,North America,2023-03-01,1413355,2023,3
+Mexico,North America,2023-04-01,1549239,2023,4
+Mexico,North America,2023-05-01,1435434,2023,5
+Mexico,North America,2023-06-01,1461752,2023,6
+Mexico,North America,2023-07-01,1129814,2023,7
+Mexico,North America,2023-08-01,1093136,2023,8
+Mexico,North America,2023-09-01,980779,2023,9
+Mexico,North America,2023-10-01,898638,2023,10
+Mexico,North America,2023-11-01,952737,2023,11
+Mexico,North America,2023-12-01,985015,2023,12
+Mexico,North America,2024-01-01,1156305,2024,1
+Mexico,North America,2024-02-01,1216426,2024,2
+Mexico,North America,2024-03-01,1329913,2024,3
+Mexico,North America,2024-04-01,1521892,2024,4
+Mexico,North America,2024-05-01,1413338,2024,5
+Mexico,North America,2024-06-01,1356088,2024,6
+Mexico,North America,2024-07-01,1075751,2024,7
+Mexico,North America,2024-08-01,1182435,2024,8
+Mexico,North America,2024-09-01,936139,2024,9
+Mexico,North America,2024-10-01,958752,2024,10
+Mexico,North America,2024-11-01,1030787,2024,11
+Mexico,North America,2024-12-01,1075268,2024,12
+Mexico,North America,2025-01-01,1176171,2025,1
+Mexico,North America,2025-02-01,1357508,2025,2
+Mexico,North America,2025-03-01,1409515,2025,3
+Mexico,North America,2025-04-01,1686468,2025,4
+Mexico,North America,2025-05-01,1545531,2025,5
+Mexico,North America,2025-06-01,1466877,2025,6
+Mexico,North America,2025-07-01,1018333,2025,7
+Mexico,North America,2025-08-01,1180409,2025,8
+Mexico,North America,2025-09-01,971209,2025,9
+Mexico,North America,2025-10-01,802838,2025,10
+Mexico,North America,2025-11-01,1003719,2025,11
+Mexico,North America,2025-12-01,967723,2025,12
+Mexico,North America,2026-01-01,1259535,2026,1
+Mexico,North America,2026-02-01,1344296,2026,2
+Mexico,North America,2026-03-01,1470023,2026,3
+Mexico,North America,2026-04-01,1617329,2026,4
+Mexico,North America,2026-05-01,1560757,2026,5
+Mexico,North America,2026-06-01,1221020,2026,6
+Netherlands,Europe,2022-01-01,79706,2022,1
+Netherlands,Europe,2022-02-01,84311,2022,2
+Netherlands,Europe,2022-03-01,91557,2022,3
+Netherlands,Europe,2022-04-01,81828,2022,4
+Netherlands,Europe,2022-05-01,80959,2022,5
+Netherlands,Europe,2022-06-01,88493,2022,6
+Netherlands,Europe,2022-07-01,64850,2022,7
+Netherlands,Europe,2022-08-01,61590,2022,8
+Netherlands,Europe,2022-09-01,49540,2022,9
+Netherlands,Europe,2022-10-01,45940,2022,10
+Netherlands,Europe,2022-11-01,54796,2022,11
+Netherlands,Europe,2022-12-01,65516,2022,12
+Netherlands,Europe,2023-01-01,56074,2023,1
+Netherlands,Europe,2023-02-01,72490,2023,2
+Netherlands,Europe,2023-03-01,80065,2023,3
+Netherlands,Europe,2023-04-01,87178,2023,4
+Netherlands,Europe,2023-05-01,86559,2023,5
+Netherlands,Europe,2023-06-01,74050,2023,6
+Netherlands,Europe,2023-07-01,73332,2023,7
+Netherlands,Europe,2023-08-01,60418,2023,8
+Netherlands,Europe,2023-09-01,55247,2023,9
+Netherlands,Europe,2023-10-01,34715,2023,10
+Netherlands,Europe,2023-11-01,46791,2023,11
+Netherlands,Europe,2023-12-01,57628,2023,12
+Netherlands,Europe,2024-01-01,72770,2024,1
+Netherlands,Europe,2024-02-01,83140,2024,2
+Netherlands,Europe,2024-03-01,88756,2024,3
+Netherlands,Europe,2024-04-01,75726,2024,4
+Netherlands,Europe,2024-05-01,83631,2024,5
+Netherlands,Europe,2024-06-01,72873,2024,6
+Netherlands,Europe,2024-07-01,74169,2024,7
+Netherlands,Europe,2024-08-01,65759,2024,8
+Netherlands,Europe,2024-09-01,61314,2024,9
+Netherlands,Europe,2024-10-01,57134,2024,10
+Netherlands,Europe,2024-11-01,48398,2024,11
+Netherlands,Europe,2024-12-01,63960,2024,12
+Netherlands,Europe,2025-01-01,71919,2025,1
+Netherlands,Europe,2025-02-01,80922,2025,2
+Netherlands,Europe,2025-03-01,90077,2025,3
+Netherlands,Europe,2025-04-01,95553,2025,4
+Netherlands,Europe,2025-05-01,97309,2025,5
+Netherlands,Europe,2025-06-01,76324,2025,6
+Netherlands,Europe,2025-07-01,71790,2025,7
+Netherlands,Europe,2025-08-01,70201,2025,8
+Netherlands,Europe,2025-09-01,57908,2025,9
+Netherlands,Europe,2025-10-01,46791,2025,10
+Netherlands,Europe,2025-11-01,54445,2025,11
+Netherlands,Europe,2025-12-01,59918,2025,12
+Netherlands,Europe,2026-01-01,69154,2026,1
+Netherlands,Europe,2026-02-01,76310,2026,2
+Netherlands,Europe,2026-03-01,90347,2026,3
+Netherlands,Europe,2026-04-01,89771,2026,4
+Netherlands,Europe,2026-05-01,83221,2026,5
+Netherlands,Europe,2026-06-01,80124,2026,6
+South Korea,Asia,2022-01-01,164348,2022,1
+South Korea,Asia,2022-02-01,189192,2022,2
+South Korea,Asia,2022-03-01,159327,2022,3
+South Korea,Asia,2022-04-01,184041,2022,4
+South Korea,Asia,2022-05-01,159018,2022,5
+South Korea,Asia,2022-06-01,150900,2022,6
+South Korea,Asia,2022-07-01,154780,2022,7
+South Korea,Asia,2022-08-01,128835,2022,8
+South Korea,Asia,2022-09-01,129936,2022,9
+South Korea,Asia,2022-10-01,112705,2022,10
+South Korea,Asia,2022-11-01,104540,2022,11
+South Korea,Asia,2022-12-01,163864,2022,12
+South Korea,Asia,2023-01-01,144327,2023,1
+South Korea,Asia,2023-02-01,175041,2023,2
+South Korea,Asia,2023-03-01,172145,2023,3
+South Korea,Asia,2023-04-01,178219,2023,4
+South Korea,Asia,2023-05-01,197036,2023,5
+South Korea,Asia,2023-06-01,172178,2023,6
+South Korea,Asia,2023-07-01,157338,2023,7
+South Korea,Asia,2023-08-01,149949,2023,8
+South Korea,Asia,2023-09-01,120317,2023,9
+South Korea,Asia,2023-10-01,114295,2023,10
+South Korea,Asia,2023-11-01,126813,2023,11
+South Korea,Asia,2023-12-01,144545,2023,12
+South Korea,Asia,2024-01-01,154805,2024,1
+South Korea,Asia,2024-02-01,169081,2024,2
+South Korea,Asia,2024-03-01,193246,2024,3
+South Korea,Asia,2024-04-01,207144,2024,4
+South Korea,Asia,2024-05-01,175745,2024,5
+South Korea,Asia,2024-06-01,169076,2024,6
+South Korea,Asia,2024-07-01,125021,2024,7
+South Korea,Asia,2024-08-01,169893,2024,8
+South Korea,Asia,2024-09-01,116428,2024,9
+South Korea,Asia,2024-10-01,102304,2024,10
+South Korea,Asia,2024-11-01,112958,2024,11
+South Korea,Asia,2024-12-01,140600,2024,12
+South Korea,Asia,2025-01-01,178605,2025,1
+South Korea,Asia,2025-02-01,190722,2025,2
+South Korea,Asia,2025-03-01,188546,2025,3
+South Korea,Asia,2025-04-01,171264,2025,4
+South Korea,Asia,2025-05-01,192332,2025,5
+South Korea,Asia,2025-06-01,154771,2025,6
+South Korea,Asia,2025-07-01,152550,2025,7
+South Korea,Asia,2025-08-01,121656,2025,8
+South Korea,Asia,2025-09-01,124993,2025,9
+South Korea,Asia,2025-10-01,122654,2025,10
+South Korea,Asia,2025-11-01,107525,2025,11
+South Korea,Asia,2025-12-01,147142,2025,12
+South Korea,Asia,2026-01-01,124755,2026,1
+South Korea,Asia,2026-02-01,155858,2026,2
+South Korea,Asia,2026-03-01,190015,2026,3
+South Korea,Asia,2026-04-01,199316,2026,4
+South Korea,Asia,2026-05-01,176151,2026,5
+South Korea,Asia,2026-06-01,172614,2026,6
+Spain,Europe,2022-01-01,75622,2022,1
+Spain,Europe,2022-02-01,102107,2022,2
+Spain,Europe,2022-03-01,102353,2022,3
+Spain,Europe,2022-04-01,111002,2022,4
+Spain,Europe,2022-05-01,101829,2022,5
+Spain,Europe,2022-06-01,101379,2022,6
+Spain,Europe,2022-07-01,90750,2022,7
+Spain,Europe,2022-08-01,83692,2022,8
+Spain,Europe,2022-09-01,72873,2022,9
+Spain,Europe,2022-10-01,59261,2022,10
+Spain,Europe,2022-11-01,74830,2022,11
+Spain,Europe,2022-12-01,98167,2022,12
+Spain,Europe,2023-01-01,81262,2023,1
+Spain,Europe,2023-02-01,94418,2023,2
+Spain,Europe,2023-03-01,104932,2023,3
+Spain,Europe,2023-04-01,113115,2023,4
+Spain,Europe,2023-05-01,107238,2023,5
+Spain,Europe,2023-06-01,94395,2023,6
+Spain,Europe,2023-07-01,94583,2023,7
+Spain,Europe,2023-08-01,77519,2023,8
+Spain,Europe,2023-09-01,56504,2023,9
+Spain,Europe,2023-10-01,67635,2023,10
+Spain,Europe,2023-11-01,75033,2023,11
+Spain,Europe,2023-12-01,65022,2023,12
+Spain,Europe,2024-01-01,91190,2024,1
+Spain,Europe,2024-02-01,97637,2024,2
+Spain,Europe,2024-03-01,106833,2024,3
+Spain,Europe,2024-04-01,117181,2024,4
+Spain,Europe,2024-05-01,110479,2024,5
+Spain,Europe,2024-06-01,107145,2024,6
+Spain,Europe,2024-07-01,92611,2024,7
+Spain,Europe,2024-08-01,85933,2024,8
+Spain,Europe,2024-09-01,63718,2024,9
+Spain,Europe,2024-10-01,70240,2024,10
+Spain,Europe,2024-11-01,51915,2024,11
+Spain,Europe,2024-12-01,79046,2024,12
+Spain,Europe,2025-01-01,88737,2025,1
+Spain,Europe,2025-02-01,105929,2025,2
+Spain,Europe,2025-03-01,98920,2025,3
+Spain,Europe,2025-04-01,109750,2025,4
+Spain,Europe,2025-05-01,119290,2025,5
+Spain,Europe,2025-06-01,110096,2025,6
+Spain,Europe,2025-07-01,108023,2025,7
+Spain,Europe,2025-08-01,76088,2025,8
+Spain,Europe,2025-09-01,73982,2025,9
+Spain,Europe,2025-10-01,74685,2025,10
+Spain,Europe,2025-11-01,63548,2025,11
+Spain,Europe,2025-12-01,72481,2025,12
+Spain,Europe,2026-01-01,93173,2026,1
+Spain,Europe,2026-02-01,98398,2026,2
+Spain,Europe,2026-03-01,106237,2026,3
+Spain,Europe,2026-04-01,109642,2026,4
+Spain,Europe,2026-05-01,105871,2026,5
+Spain,Europe,2026-06-01,93648,2026,6
+United Kingdom,Europe,2022-01-01,378025,2022,1
+United Kingdom,Europe,2022-02-01,333620,2022,2
+United Kingdom,Europe,2022-03-01,423370,2022,3
+United Kingdom,Europe,2022-04-01,464595,2022,4
+United Kingdom,Europe,2022-05-01,461617,2022,5
+United Kingdom,Europe,2022-06-01,389578,2022,6
+United Kingdom,Europe,2022-07-01,331964,2022,7
+United Kingdom,Europe,2022-08-01,280817,2022,8
+United Kingdom,Europe,2022-09-01,311115,2022,9
+United Kingdom,Europe,2022-10-01,267103,2022,10
+United Kingdom,Europe,2022-11-01,282873,2022,11
+United Kingdom,Europe,2022-12-01,306752,2022,12
+United Kingdom,Europe,2023-01-01,344110,2023,1
+United Kingdom,Europe,2023-02-01,411564,2023,2
+United Kingdom,Europe,2023-03-01,416198,2023,3
+United Kingdom,Europe,2023-04-01,456343,2023,4
+United Kingdom,Europe,2023-05-01,413924,2023,5
+United Kingdom,Europe,2023-06-01,364752,2023,6
+United Kingdom,Europe,2023-07-01,373743,2023,7
+United Kingdom,Europe,2023-08-01,296297,2023,8
+United Kingdom,Europe,2023-09-01,275861,2023,9
+United Kingdom,Europe,2023-10-01,233251,2023,10
+United Kingdom,Europe,2023-11-01,261070,2023,11
+United Kingdom,Europe,2023-12-01,369468,2023,12
+United Kingdom,Europe,2024-01-01,346443,2024,1
+United Kingdom,Europe,2024-02-01,398995,2024,2
+United Kingdom,Europe,2024-03-01,407728,2024,3
+United Kingdom,Europe,2024-04-01,442680,2024,4
+United Kingdom,Europe,2024-05-01,370717,2024,5
+United Kingdom,Europe,2024-06-01,394476,2024,6
+United Kingdom,Europe,2024-07-01,324681,2024,7
+United Kingdom,Europe,2024-08-01,266076,2024,8
+United Kingdom,Europe,2024-09-01,271667,2024,9
+United Kingdom,Europe,2024-10-01,264748,2024,10
+United Kingdom,Europe,2024-11-01,247725,2024,11
+United Kingdom,Europe,2024-12-01,290881,2024,12
+United Kingdom,Europe,2025-01-01,384344,2025,1
+United Kingdom,Europe,2025-02-01,419929,2025,2
+United Kingdom,Europe,2025-03-01,383225,2025,3
+United Kingdom,Europe,2025-04-01,444820,2025,4
+United Kingdom,Europe,2025-05-01,418992,2025,5
+United Kingdom,Europe,2025-06-01,392592,2025,6
+United Kingdom,Europe,2025-07-01,400349,2025,7
+United Kingdom,Europe,2025-08-01,282783,2025,8
+United Kingdom,Europe,2025-09-01,262328,2025,9
+United Kingdom,Europe,2025-10-01,207733,2025,10
+United Kingdom,Europe,2025-11-01,273735,2025,11
+United Kingdom,Europe,2025-12-01,257488,2025,12
+United Kingdom,Europe,2026-01-01,387793,2026,1
+United Kingdom,Europe,2026-02-01,364408,2026,2
+United Kingdom,Europe,2026-03-01,420561,2026,3
+United Kingdom,Europe,2026-04-01,401797,2026,4
+United Kingdom,Europe,2026-05-01,453476,2026,5
+United Kingdom,Europe,2026-06-01,420565,2026,6

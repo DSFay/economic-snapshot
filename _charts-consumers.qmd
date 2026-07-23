@@ -1,0 +1,108 @@
+::: {.chart-card}
+[Light vehicle sales]{.chart-title}
+```{r}
+car_sales |>
+  line_chart(yvar = value, y_lab = "Sales (millions)",
+             caption = "Source: U.S. Bureau of Economic Analysis via FRED | Monthly")
+```
+
+Total light vehicle sales in the United States at a seasonally adjusted annual
+rate, including new domestic and imported cars and light trucks.
+:::
+
+::: {.chart-card}
+[Consumer loans, all commercial banks]{.chart-title}
+```{r}
+consume_loans |>
+  line_chart(yvar = value, y_lab = "USD (billions)",
+             caption = "Source: Board of Governors of the Federal Reserve System via FRED | Weekly")
+```
+
+Outstanding consumer loan balances held by all commercial banks, including
+credit card, auto, and personal loans but excluding mortgages. A broad measure
+of household borrowing.
+:::
+
+::: {.chart-card}
+[Consumer sentiment]{.chart-title}
+```{r}
+sentiment_dat |>
+  line_chart(yvar = value, y_lab = "Index (1966 = 100)",
+             caption = "Source: University of Michigan Survey of Consumers via FRED | Monthly")
+```
+
+The University of Michigan Index of Consumer Sentiment measures household
+attitudes toward personal finances, business conditions, and buying conditions,
+benchmarked to 100 in 1966. Values above 100 reflect above-average confidence;
+a sustained decline often precedes reduced consumer spending.
+:::
+
+::: {.chart-card}
+[Regular gasoline price]{.chart-title}
+```{r}
+gas_dat |>
+  line_chart(yvar = value, y_lab = "USD per gallon",
+             caption = "Source: U.S. Energy Information Administration via FRED | Weekly")
+```
+
+The average US retail price for a gallon of regular gasoline. One of the most
+visible prices households face — posted on every corner — and it tends to shape
+how people feel about inflation more than the overall index does.
+:::
+
+::: {.chart-card}
+[30-year fixed mortgage rate]{.chart-title}
+```{r}
+mortgage_dat |>
+  line_chart(yvar = value, y_lab = "Percent",
+             caption = "Source: Freddie Mac via FRED | Weekly")
+```
+
+The average rate on a 30-year fixed-rate mortgage. This is where market interest
+rates reach households most directly: it sets the monthly payment on a home
+purchase and largely determines who can afford to buy or refinance.
+:::
+
+::: {.chart-card}
+[Rent of primary residence]{.chart-title}
+```{r}
+rent_dat |>
+  line_chart(yvar = value, y_lab = "Index (1982-84 = 100)",
+             caption = "Source: U.S. Bureau of Labor Statistics via FRED | Monthly")
+```
+
+The rent component of the Consumer Price Index, averaged across US cities. Rent
+is the single largest monthly cost for most renting households and one of the
+slowest-moving parts of inflation, so it keeps pushing on the headline index
+long after other prices have cooled.
+:::
+
+::: {.chart-card}
+[Consumer Price Index (CPI-U)]{.chart-title}
+```{r}
+cpi_dat |>
+  line_chart(yvar = value, y_lab = "Index (1982-84 = 100)",
+             caption = "Source: U.S. Bureau of Labor Statistics via FRED | Monthly")
+```
+
+The Consumer Price Index for All Urban Consumers (CPI-U) tracks changes in
+average prices paid by urban consumers for a basket of goods and services,
+benchmarked to 100 in the 1982-84 base period. The chart shows the level rather
+than the year-over-year change.
+:::
+
+::: {.chart-card}
+[Durable goods new orders]{.chart-title}
+```{r}
+durable_goods_dat |>
+  line_chart(yvar = value, y_lab = "USD (millions)",
+             caption = "Source: U.S. Census Bureau via FRED | Monthly")
+```
+
+New orders placed with domestic manufacturers for durable goods, items expected
+to last three or more years such as aircraft, machinery, and electronics. A
+leading indicator of manufacturing activity. One caveat when reading month to
+month: the defense component is lumpy and contract-driven, so a single large
+military order can swing the headline number without saying much about
+underlying business investment. The series is seasonally adjusted.
+:::

@@ -1,0 +1,37 @@
+---
+title: "About"
+---
+
+Economic Snapshot brings together core U.S. economic indicators — labor,
+consumers, travel, public health, and financial markets — in one place, pulled
+from live public sources through APIs and web scrapers and rendered as
+interactive charts.
+
+Economic Snapshot was developed by Faelynn Carroll, Ethan Kapstein, and Jacob
+N. Shapiro of Princeton University.
+
+## Data sources
+
+- **FRED** (Federal Reserve Bank of St. Louis) — unemployment, payrolls,
+  initial and continued claims, job openings, wage growth, consumer prices,
+  rent, gasoline, the 30-year mortgage rate, sentiment, consumer loans,
+  durable goods, vehicle sales, Treasury yields, the S&P 500, the dollar
+  index, the GDP nowcast, housing starts, and airline load factor.
+- **BLS** (Bureau of Labor Statistics) — civilian labor force by state.
+- **TSA** — daily checkpoint passenger volumes.
+- **CDC** — confirmed measles cases by week of rash onset.
+- **International Trade Administration (I-94)** — monthly international visitor
+  arrivals by country of origin.
+
+## Methods
+
+Data are visualized with no or minimal pre-processing and use the highest
+available frequencies so the charts reflect the maximum amount of information.
+Where a series is published more often than it reads clearly — daily market
+data, weekly state claims — it is averaged up to a weekly or monthly value;
+the level of aggregation is stated in the source line beneath each chart.
+
+<!-- Faelynn to add further methodology notes here. -->
+
+
+{{< include _footer.qmd >}}

@@ -1,0 +1,7 @@
+```{r}
+#| include: false
+# Shared data prep (global.R) + chart helpers (charts.R). Included at the top
+# of every category page so each one has the prepared data and plotly_chart().
+source(here::here("R", "global.R"))
+source(here::here("R", "charts.R"))
+```

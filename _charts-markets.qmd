@@ -1,0 +1,65 @@
+::: {.chart-card}
+[10-year Treasury yield]{.chart-title}
+```{r}
+bond_dat |>
+  line_chart(yvar = value, y_lab = "Percent",
+             caption = "Source: Board of Governors of the Federal Reserve System via FRED | Weekly average of daily")
+```
+
+The yield on 10-year U.S. Treasury securities at constant maturity, a benchmark
+for long-term borrowing costs across the economy, including mortgage rates and
+corporate bonds.
+:::
+
+::: {.chart-card}
+[S&P 500 index]{.chart-title}
+```{r}
+spy_dat |>
+  line_chart(yvar = value, y_lab = "Index",
+             caption = "Source: S&P Dow Jones Indices LLC via FRED | Weekly average of daily")
+```
+
+The S&P 500 index tracks the market-capitalization-weighted performance of 500
+large U.S. publicly traded companies, widely used as a proxy for the overall
+U.S. equity market.
+:::
+
+::: {.chart-card}
+[Housing starts]{.chart-title}
+```{r}
+house_dat |>
+  line_chart(yvar = value, y_lab = "Thousands of units",
+             caption = "Source: U.S. Census Bureau and U.S. Dept. of Housing and Urban Development via FRED | Monthly")
+```
+
+New privately-owned housing units started, at a seasonally adjusted annual rate.
+Housing starts are a leading indicator of construction activity and broadly
+reflect demand in the housing market.
+:::
+
+::: {.chart-card}
+[Trade-weighted US dollar index]{.chart-title}
+```{r}
+usd_dat |>
+  line_chart(yvar = value, y_lab = "Index",
+             caption = "Source: Board of Governors of the Federal Reserve System via FRED | Weekly")
+```
+
+The value of the dollar against a basket of major trading partners' currencies,
+weighted by trade volume. A stronger dollar makes imports cheaper and US exports
+more expensive, and tends to weigh on the earnings of multinational firms.
+:::
+
+::: {.chart-card}
+[GDP nowcast (Atlanta Fed)]{.chart-title}
+```{r}
+gdpnow_dat |>
+  line_chart(yvar = value, y_lab = "Percent (annualized)",
+             caption = "Source: Federal Reserve Bank of Atlanta via FRED | Quarterly")
+```
+
+GDPNow is the Atlanta Fed's running estimate of real GDP growth for the current
+quarter, rebuilt as each new piece of source data arrives. It is a nowcast, not
+an official statistic — it fills the gap before the Bureau of Economic Analysis
+publishes its first estimate.
+:::

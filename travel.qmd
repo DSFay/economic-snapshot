@@ -1,0 +1,14 @@
+---
+title: "Travel indicators"
+---
+
+{{< include _setup.qmd >}}
+
+{{< include _view-toggle.qmd >}}
+
+::: {.chart-grid .view-stacked}
+{{< include _charts-travel.qmd >}}
+:::
+
+
+{{< include _footer.qmd >}}
