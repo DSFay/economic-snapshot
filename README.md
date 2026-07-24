@@ -12,9 +12,9 @@ that pulls 28 indicators from five public sources through APIs and web scrapers.
 ```
 FRED ─┐
 BLS  ─┤  API pulls      ┐
-TSA  ─┤  + web scrapers ├─▶  data/ (CSV)  ─▶  R/global.R  ─▶  two front ends
-CDC  ─┤  (R/run_all.R)  ┘    (gitignored)     (shared prep)    ├─ Quarto website  ← published site
-ITA  ─┘                                                        └─ shiny-app/      ← local dashboard
+TSA  ─┤  + web scrapers ├─▶  data/ (CSV)  ─▶  R/global.R  ─▶  Quarto website  ← published site
+CDC  ─┤  (R/run_all.R)  ┘    (gitignored)     (shared prep)
+ITA  ─┘
 ```
 
 - **The Quarto site** (`index.qmd` plus a page per category) is the published
@@ -24,10 +24,10 @@ ITA  ─┘                                                        └─ shiny-
 
   ![A category page: national unemployment against its period average, with time-window buttons and a source note linking to the underlying FRED series](assets/screenshot-charts.png)
 
-- **`shiny-app/`** is the original Shiny dashboard the Quarto site was ported
-  from, kept as a local interactive view. Both front ends share all data
-  loading and preparation through `R/global.R`, so their numbers can never
-  drift apart.
+- **`shiny-app/`** is the original Shiny prototype the Quarto site was ported
+  from. It is kept for reference and is **no longer maintained**: it still
+  loads its data through `R/global.R`, but it predates the current theme and
+  chart set, so what it renders no longer matches the published site.
 - **`R/run_all.R`** orchestrates the automated pulls with per-source logging
   and an email alert on failure. Runs on a weekly schedule.
 
@@ -63,10 +63,10 @@ To use **real data**:
    into it as `fred_creds.env` / `bls_creds.env`, filling in your keys
    (`creds/` is gitignored — keys never reach git).
 3. `Rscript R/run_all.R` to pull everything into `data/`, then re-render.
-   Once `data/` has files, the front ends use it automatically instead of
-   the sample.
+   Once `data/` has files, the site uses it automatically instead of the
+   sample.
 
-To run the Shiny version locally: `Rscript -e 'shiny::runApp("shiny-app")'`.
+To run the unmaintained Shiny prototype: `Rscript -e 'shiny::runApp("shiny-app")'`.
 
 ## Repository layout
 
@@ -76,11 +76,11 @@ index.qmd               Quarto site landing page
 _quarto.yml             site config (sidebar nav, theme)
 custom.scss             site theme
 R/                      config, shared data prep (global.R), pull scripts
-shiny-app/              original Shiny front end (ui.R, server.R)
+shiny-app/              original Shiny prototype, unmaintained (ui.R, server.R)
 sample_data/            synthetic sample so a clone renders with no setup
 data/                   real pulled data (gitignored; created by run_all.R)
 creds/                  API keys (gitignored; template in repo root)
-assets/                 README screenshot
+assets/                 README screenshots + 1.91:1 social preview card
 setup_cron.sh           installs the weekly local pull schedule (macOS cron)
 ```
 
