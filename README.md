@@ -5,7 +5,7 @@ travel, public health, and markets — built on an automated R data pipeline
 that pulls 28 indicators from five public sources through APIs and web scrapers.
 **[View the live dashboard](https://dsfay.github.io/economic-snapshot/)**
 
-![Economic Snapshot dashboard](assets/screenshot.png)
+![Economic Snapshot landing page: headline indicator cards comparing each series against a selectable baseline, over category navigation](assets/screenshot.png)
 
 ## How it works
 
@@ -21,6 +21,9 @@ ITA  ─┘                                                        └─ shiny-
   product: a static multi-page site with interactive plotly charts (hover
   tooltips, 1Y/2Y/All time-window buttons). It renders to plain HTML — no
   server required.
+
+  ![A category page: national unemployment against its period average, with time-window buttons and a source note linking to the underlying FRED series](assets/screenshot-charts.png)
+
 - **`shiny-app/`** is the original Shiny dashboard the Quarto site was ported
   from, kept as a local interactive view. Both front ends share all data
   loading and preparation through `R/global.R`, so their numbers can never
